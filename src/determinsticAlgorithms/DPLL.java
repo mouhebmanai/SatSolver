@@ -5,7 +5,7 @@ import helpers.*;
 /**
  * implements DP approach  to solve the
  */
-public class DPLL implements CNFSATSolver {
+public class DPLL extends DeterministicAlgorithm implements CNFSATSolver {
 
     /**
      method from Interface
@@ -81,44 +81,7 @@ public class DPLL implements CNFSATSolver {
 
     }
 
-    /**
-     * Removes the already assigned variables
-     * @param clauses The list of clauses.
-     * @param assignment   The current variable assignments.
-     * @return A formula without assigned variables
-     */
-    private List<List<Integer>> removeAssigned(List<List<Integer>> clauses, Map<Integer, Boolean> assignment) {
 
-        List<List<Integer>> Result = new ArrayList<>();
-        for (List<Integer> clause : clauses) {
-
-            List<Integer> puredClause = new ArrayList<>();
-            boolean clauseSatisfied = false;
-            for (int literal : clause) {
-                int var = Math.abs(literal);
-
-                if (assignment.containsKey(var)) {
-                    // literal > 0 is true
-                    // <=> satisfied if value of the mapping is also true
-                    if (assignment.get(var) == literal > 0) {
-                        clauseSatisfied = true;
-                        break;
-                    }
-                } else {
-                    puredClause.add(literal); // Keep unassigned literals
-                }
-            }
-            if (!clauseSatisfied) {
-                if (puredClause.isEmpty()) {
-                    return null; //
-                }
-                Result.add(puredClause);
-            }
-
-
-        }
-        return Result;
-    }
 
     /**
      * Finds all unit clauses (clauses with a single literal) and returns the
