@@ -10,7 +10,6 @@ public class Main {
     public static void main(String[] args) {
 
        String filePath = "CNF403/CBS_k3_n100_m403_b10_2.cnf";
-
         try {
 
             System.out.println("Parsing: " + filePath);
