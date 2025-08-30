@@ -30,13 +30,13 @@ Presented algorithms :
 * Schoening's algorithm : a simple algorithm implemented in two different classes 
 *  * pureSCH : here the pure algorithm based on complete randomness is presented
 *  * SCH_withH : some other heuristics are added to the algorithm
-* PPSZ :  to be implemented
+* PPSZ :  improvement on the previous algorithm that uses resolution
 * Hertli : to be implemented
 
 ### Determinstic Algorithms
 * DPLL : Davis-Putnam-Logemann-Loveland: A classic, complete, 
 backtracking-based algorithm that is guaranteed to find a solution.
 * Danstin and al. : A deterministic algorithm for k-SAT that runs in O((1.5)^n) for 3-SAT and is based on derandomization.
-* Moser-Scheder : improvement on the previous algorithm that uses resolution
+* Moser-Scheder : to be implemented
 * Liu : to be implemented
 
