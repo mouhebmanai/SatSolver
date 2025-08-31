@@ -31,7 +31,7 @@ public class RandomizedAlgorithm {
 
     }
 
-   protected Map<Integer, Boolean> Random_init (CnfFormula formula) {
+   public Map<Integer, Boolean> Random_init (CnfFormula formula) {
 
         Map<Integer,Boolean> beta = new HashMap<>();
 

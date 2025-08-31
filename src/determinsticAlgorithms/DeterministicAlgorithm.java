@@ -73,6 +73,22 @@ public class DeterministicAlgorithm {
         return Result;
     }
 
+    protected boolean ClauseSatisfied(List<Integer> clause, Map<Integer,Boolean> assignment ) {
+        int  var;
+        for(int lit : clause){
+            var = Math.abs(lit) ;
+            if (assignment.containsKey(var) && assignment.get(var) != lit<0) {
+                return  true;
+            }
+        }
+        return false;
+    }
+    protected List<List<Integer>> simplifyClauses(List<List<Integer>> clauses, int literal) {
+          List<List<Integer>> simplifiedClauses = new ArrayList<>(clauses);
+        return simplifiedClauses;
+    }
+
+
 
 
 }
