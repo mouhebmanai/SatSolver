@@ -5,10 +5,10 @@ import java.util.*;
 /**
  *  Represent a formula
  */
-public record CnfFormula(List<List<Integer>> clauses,Set<Integer> variables, int NumberOfVariables, int NumberOfClauses) {
+public record CnfFormula(int type ,List<List<Integer>> clauses,Set<Integer> variables, int NumberOfVariables, int NumberOfClauses) {
     /**
      * Constructs a CnfFormula object.
-     *
+     * @param type basically gives the maximum size of a clause
      * @param clauses      The list of clauses.
      * @param variables   The variables themselves
      * @param NumberOfVariables The number of variables declared in the file.
@@ -25,6 +25,9 @@ public record CnfFormula(List<List<Integer>> clauses,Set<Integer> variables, int
     @Override
     public List<List<Integer>> clauses() {
         return clauses;
+    }
+    public int type() {
+        return type;
     }
 
     @Override

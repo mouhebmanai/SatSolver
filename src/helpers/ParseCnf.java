@@ -17,62 +17,6 @@ public class ParseCnf {
      * Parsing of the cnf
      * @param filePath The path to the .cnf file.
      * @param MaxN limit the maximum number of variables in the parsed formula (should be between 0 and 100)
-     * @return A CnfFormula object containing the clauses and metadata.
-     * @throws IOException in case of input error
-     * @throws NumberFormatException if the file contains invalid numbers.
-     */
-    public static CnfFormula parseCnf(String filePath, int MaxN) throws IOException, NumberFormatException {
-        List<List<Integer>> clauses = new ArrayList<>();
-
-        BufferedReader buffer = new BufferedReader(new FileReader(filePath));
-        String line;
-        while ((line = buffer.readLine()) != null) {
-            line = line.trim();
-            if (line.startsWith("c") || line.isEmpty()) {
-                continue;
-            }
-            // first line
-            if (!line.startsWith("p cnf")) {
-
-
-                // clauses
-                String[] literals = line.split("\\s+");
-
-                List<Integer> clause = new ArrayList<>();
-
-                for (String literal : literals) {
-                    if (!literal.isEmpty()) {
-                        int val =Integer.parseInt(literal);
-                        if (val  != 0 && Math.abs(val) <= MaxN ) {
-                            clause.add(val);
-                        }
-                    }
-                }
-
-                if (!clause.isEmpty()) {
-                    clauses.add(clause);
-                }
-            }
-
-        }
-
-        buffer.close();
-
-        Set<Integer> Variables = new HashSet<>();
-
-        for (List<Integer> clause : clauses ) {
-            for (int literal : clause) {
-                Variables.add(Math.abs(literal));
-            }
-        }
-
-        return new CnfFormula(clauses,Variables, Variables.size(), clauses.size());
-
-    }
-    /**
-     * Parsing of the cnf
-     * @param filePath The path to the .cnf file.
-     * @param MaxN limit the maximum number of variables in the parsed formula (should be between 0 and 100)
      * @param MaxC limits the number of variables in a clause to c, for example if c = 2, the resulting formula is in 2-CNF
      * @return A CnfFormula object containing the clauses and metadata.
      * @throws IOException in case of input error
@@ -82,6 +26,7 @@ public class ParseCnf {
         List<List<Integer>> clauses = new ArrayList<>();
         BufferedReader buffer = new BufferedReader(new FileReader(filePath));
         String line;
+        int RealmaxClausesize = 0;
         while ((line = buffer.readLine()) != null) {
             line = line.trim();
             if (line.startsWith("c") || line.isEmpty()) {
@@ -106,6 +51,7 @@ public class ParseCnf {
 
                 if (!clause.isEmpty()) {
                     clauses.add(clause);
+                    if (clause.size() > RealmaxClausesize) RealmaxClausesize = clause.size();
                 }
             }
 
@@ -121,7 +67,9 @@ public class ParseCnf {
             }
         }
 
-        return new CnfFormula(clauses,Variables, Variables.size(), clauses.size());
+        // find the maximum
+
+        return new CnfFormula(RealmaxClausesize, clauses,Variables, Variables.size(), clauses.size());
 
     }
 

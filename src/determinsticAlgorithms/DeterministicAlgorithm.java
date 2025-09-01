@@ -1,8 +1,6 @@
 package determinsticAlgorithms;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class DeterministicAlgorithm {
 
@@ -85,8 +83,38 @@ public class DeterministicAlgorithm {
     }
     protected List<List<Integer>> simplifyClauses(List<List<Integer>> clauses, int literal) {
           List<List<Integer>> simplifiedClauses = new ArrayList<>(clauses);
+          //TODO
         return simplifiedClauses;
     }
+
+    protected int HammingDistance(Map<Integer, Boolean> a1, Map<Integer, Boolean> a2) {
+        int distance = 0;
+        for (int key : a1.keySet()) {
+            if (!a1.get(key).equals(a2.get(key))) {
+                distance++;
+            }
+        }
+        return distance;
+    }
+
+    protected Set<Map<Integer,Boolean>> genAssignments( List<Integer> vars) {
+        Set<Map<Integer,Boolean>> result = new HashSet<>();
+        Map<Integer,Boolean> template =  new HashMap<>();
+        int n = vars.size();
+        int power = 1 << n;
+         for (int i = 0 ; i < power ; i++) {
+             template = null;
+             for (int j = 0 ; j < n ; j++) {
+
+             }
+                 result.add(template);
+
+         }
+        return  result;
+
+    }
+
+
 
 
 

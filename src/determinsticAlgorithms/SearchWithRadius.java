@@ -24,7 +24,7 @@ public class SearchWithRadius extends  DeterministicAlgorithm  {
         if(formula.NumberOfVariables() %2 !=0) {
             Set<Integer> cnfVariables =  formula.variables();
             cnfVariables.add(cnfVariables.size()+1) ; // add a new dummy variable  under the assumption the variables are in the form 1,2,...,n
-            cnfFormula = new CnfFormula(formula.clauses(),cnfVariables, formula.NumberOfVariables()+1,formula.NumberOfClauses() );
+            cnfFormula = new CnfFormula(formula.type(), formula.clauses(),cnfVariables, formula.NumberOfVariables()+1,formula.NumberOfClauses() );
         } else {
             cnfFormula = formula;
         }

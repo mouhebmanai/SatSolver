@@ -192,7 +192,10 @@ public class SCH_withH extends RandomizedAlgorithm implements CNFSATSolver {
             System.out.println("|");
         } else {
 
-            System.out.println("|Unlikely to be satisfiable|");
+            int k = formula.type();
+            double value = Repetitions * 2.0 / 3.0 * Math.pow(k /(2.0* (k-1)), formula.NumberOfVariables());
+
+            System.out.printf("The probability that the formula is satisfiable is less than exp(-%g) \n", value);
             System.out.println("| Number of  phases  run is " + Repetitions + " |");
         }
 

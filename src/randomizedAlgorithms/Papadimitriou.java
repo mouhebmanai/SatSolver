@@ -107,7 +107,7 @@ public class Papadimitriou extends RandomizedAlgorithm implements  CNFSATSolver 
             System.out.println("|");
         } else {
             // error derived from the formula for setting the repetition to ensure the error
-            double error =  Math.pow(2,-Repetitions) ;
+            double error = 1.0 /( 1<<Repetitions );
             System.out.printf("The probability that the formula is satisfiable is less than %g\n", error);
             System.out.println("| Number of  phases of length 2n^2 run is " + Repetitions + " |");
 

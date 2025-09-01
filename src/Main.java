@@ -15,12 +15,12 @@ public class Main {
         try {
 
             System.out.println("Parsing: " + filePath);
-            CnfFormula formula = ParseCnf.parseKCnf(filePath,50, 2);
+            CnfFormula formula = ParseCnf.parseKCnf(filePath,50, 50);
             //System.out.println(formula.clauses());
             System.out.println("Parsing successful:\t  " +
                     formula.NumberOfVariables() + " variables,\t" +
                     formula.NumberOfClauses() + " clauses.");
-
+            System.out.println("The formula is in  "+ formula.type()+"-CNF \n");
             //change with respect to the solver
            CNFSATSolver papSolver = new Papadimitriou();
            CNFSATSolver dpllSolver = new DPLL();
@@ -28,7 +28,7 @@ public class Main {
        // SCH_withH solver3 = new SCH_withH();
             System.out.println(formula.clauses());
         papSolver.Output(formula);
-        dpllSolver.Output(formula);
+      //  dpllSolver.Output(formula);
 
             //____Solve and Output
            // solver2.Output(formula);

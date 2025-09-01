@@ -139,7 +139,7 @@ public class RandomizedAlgorithm {
 
         // Create a new formula object with the cleaned clauses
 
-        return new CnfFormula(clauses, variables, variables.size(), clauses.size());
+        return new CnfFormula(formula.type(), clauses, variables, variables.size(), clauses.size());
     }
 
 
