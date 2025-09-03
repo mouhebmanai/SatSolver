@@ -113,8 +113,8 @@ public class Danstin extends DeterministicAlgorithm   {
 
     }
 
-//_____________ needed helper functions for Danstin and al algorithm (to be moved to DeterministicAlgorithm.java) if
-//_____________ other algorithms need them
+//_____________ needed helper functions for Danstin and al algorithm (to be moved to DeterministicAlgorithm.java if
+//_____________ other det. algorithms need them)
 
 
 
@@ -164,13 +164,6 @@ public class Danstin extends DeterministicAlgorithm   {
 
 
 
-
-
-
-
-
-
-
     /**
      *
      * @param  codes of each part of the variables
@@ -181,6 +174,8 @@ public class Danstin extends DeterministicAlgorithm   {
         
     return concatCodesRecursive( codes , codes.size() -1 );
     }
+
+
 
     /**
      *   recursive core algorithm
