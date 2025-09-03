@@ -48,8 +48,8 @@ public class Papadimitriou extends RandomizedAlgorithm implements  CNFSATSolver 
 
     @Override
     public SatResult solve(CnfFormula formula) {
-            // in case no initial assignment is given, generate randomly
-            Map<Integer,Boolean> assignment  = beta_0 == null ? Random_init(formula) : beta_0;
+        // in case no initial assignment is given, generate randomly
+        Map<Integer,Boolean> assignment  = beta_0 == null ? Random_init(formula) : beta_0;
         return pap(formula,Repetitions, assignment);
     }
 
@@ -61,23 +61,23 @@ public class Papadimitriou extends RandomizedAlgorithm implements  CNFSATSolver 
      * @return (hopefully) returns a satisfying assignment to @formula
      */
     private SatResult pap(CnfFormula formula,  int Repetitions, Map<Integer,Boolean> beta) {
-            int n = formula.NumberOfVariables();
-           for (int  i = 0 ; i< 2*n*n*Repetitions ; i++) {
-               List<Integer>  pickedClause = Random_Pick_UClause(formula.clauses(),beta);
+        int n = formula.NumberOfVariables();
+        for (int  i = 0 ; i< 2*n*n*Repetitions ; i++) {
+            List<Integer>  pickedClause = Random_Pick_UClause(formula.clauses(),beta);
 
-               if (pickedClause == null) {
-                   // all clauses are satisfied
-                   System.out.println("\n\n| Number of  phases  run is " + i + " |") ;
-                   return new SatResult(true,beta);
-               }
-               int pickedLiteral = pickedClause.get(rand.nextInt(pickedClause.size())) ;
-               int val = Math.abs(pickedLiteral);
+            if (pickedClause == null) {
+                // all clauses are satisfied
+                System.out.println("\n\n| Number of  phases  run is " + i + " |") ;
+                return new SatResult(true,beta);
+            }
+            int pickedLiteral = pickedClause.get(rand.nextInt(pickedClause.size())) ;
+            int val = Math.abs(pickedLiteral);
 
-               //flip the value
-               beta.put(val, !beta.get(val));
+            //flip the value
+            beta.put(val, !beta.get(val));
 
 
-           }
+        }
 
         return new SatResult(false,null);
     }
@@ -104,7 +104,7 @@ public class Papadimitriou extends RandomizedAlgorithm implements  CNFSATSolver 
                 System.out.print("|\t" + assign.getKey() + ":\t " + (assign.getValue() ? "T" : "F") + "\t");
                 if ( cnt % 10 ==0 ) { System.out.println("|");}
             }
-            System.out.println("|");
+            if ( cnt % 10 !=0 )   System.out.println("|");
         } else {
             // error derived from the formula for setting the repetition to ensure the error
             double error = 1.0 /( 1<<Repetitions );

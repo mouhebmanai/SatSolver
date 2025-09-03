@@ -9,7 +9,11 @@ public class SearchWithRadius extends  DeterministicAlgorithm  {
 
     }
 
+    @Override
+    public SatResult solve(CnfFormula formula) {
 
+        return DoubleSidedSearch(formula);
+    }
 
 
     public SatResult simpleSearch(CnfFormula formula) {
@@ -73,7 +77,7 @@ public class SearchWithRadius extends  DeterministicAlgorithm  {
             SatResult result = search(simplifiedClauses, r - 1, beta1);
 
             if (result.satisfiable()) {
-              // in this implementation we are sure
+                // in this implementation we are sure
                 // the value of literal will stay the same in result
                 return result;
             }

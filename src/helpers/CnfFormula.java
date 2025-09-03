@@ -8,12 +8,13 @@ import java.util.*;
 public record CnfFormula(int type ,List<List<Integer>> clauses,Set<Integer> variables, int NumberOfVariables, int NumberOfClauses) {
     /**
      * Constructs a CnfFormula object.
-     * @param type basically gives the maximum size of a clause
+     * @param type  gives the maximum size present in the clauses
      * @param clauses      The list of clauses.
-     * @param variables   The variables themselves
-     * @param NumberOfVariables The number of variables declared in the file.
-     * @param NumberOfClauses   The number of clauses declared in the file.
+     * @param variables   The variables themselves-
+     * @param NumberOfVariables The number of variables in the formula.
+     * @param NumberOfClauses   The number of clauses in the formula.
      */
+
     public CnfFormula {
     }
 

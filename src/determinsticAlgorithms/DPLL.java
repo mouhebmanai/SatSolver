@@ -5,7 +5,7 @@ import helpers.*;
 /**
  * implements DP approach  to solve the
  */
-public class DPLL extends DeterministicAlgorithm implements CNFSATSolver {
+public class DPLL extends DeterministicAlgorithm  {
 
     /**
      method from Interface
@@ -45,6 +45,7 @@ public class DPLL extends DeterministicAlgorithm implements CNFSATSolver {
         //  OLR
         Map<Integer, Boolean> OLR = OneLiteralRuleVars(puredClauses);
         if (!OLR.isEmpty()) {
+
             assignment.putAll(OLR);
             return dpll(puredClauses, assignment);
         }
@@ -54,6 +55,7 @@ public class DPLL extends DeterministicAlgorithm implements CNFSATSolver {
         // PLR
         Map<Integer, Boolean> PLR = findPureLiterals(puredClauses);
         if (!PLR.isEmpty()) {
+
             assignment.putAll(PLR);
             return dpll(puredClauses, assignment);
         }
@@ -135,38 +137,5 @@ public class DPLL extends DeterministicAlgorithm implements CNFSATSolver {
         }
         return assignments;
     }
-
-
-
-    public  void Output(CnfFormula formula) {
-
-        long startTime = System.currentTimeMillis();
-        SatResult result = this.solve(formula);
-        long endTime = System.currentTimeMillis();
-
-        //System.out.println("Formula " + formula.clauses());
-        //____Output
-        System.out.println("\n|\t DP approach\t|\t deterministic\t|\n");
-        if (result.satisfiable()) {
-            System.out.println("Satisfiable\n");
-
-            Map<Integer, Boolean> certificateTree = new TreeMap<>(result.certificate());
-
-            int cnt = 0 ;
-            System.out.println("Certificate:");
-            for (Map.Entry<Integer, Boolean> assign : certificateTree.entrySet()) {
-                cnt++;
-                System.out.print("|\t" + assign.getKey() + ":\t " + (assign.getValue() ? "T" : "F") + "\t");
-                if ( cnt % 10 ==0 ) { System.out.println("|");}
-            }
-            System.out.println("|");
-        } else {
-            System.out.println("Unsatisfiable!");
-        }
-        System.out.println("\n Time taken: " + (endTime - startTime) + " ms \n");
-
-    }
-
-
 
 }

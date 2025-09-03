@@ -23,6 +23,7 @@ public class ParseCnf {
      * @throws NumberFormatException if the file contains invalid numbers.
      */
     public static CnfFormula parseKCnf(String filePath, int MaxN, int MaxC) throws IOException, NumberFormatException {
+        System.out.println("Parsing: " + filePath);
         List<List<Integer>> clauses = new ArrayList<>();
         BufferedReader buffer = new BufferedReader(new FileReader(filePath));
         String line;
@@ -67,7 +68,10 @@ public class ParseCnf {
             }
         }
 
-        // find the maximum
+        System.out.println("Parsing successful:\t  " +
+                Variables.size()+ " variables,\t" +
+                clauses.size() + " clauses.");
+         System.out.println("The formula is in  " + RealmaxClausesize + "-CNF \n");
 
         return new CnfFormula(RealmaxClausesize, clauses,Variables, Variables.size(), clauses.size());
 

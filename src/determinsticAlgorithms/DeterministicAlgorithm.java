@@ -1,13 +1,15 @@
 package determinsticAlgorithms;
 
+import helpers.*;
+
 import java.util.*;
 
-public class DeterministicAlgorithm {
+public class DeterministicAlgorithm implements CNFSATSolver {
 
     /**
      * Simply search for an unsatisfied clause and returns the first one it finds
      */
-    protected  List<Integer> Pick_UClause(List<List<Integer>> clauses, Map<Integer, Boolean> assignment) {
+    protected List<Integer> Pick_UClause(List<List<Integer>> clauses, Map<Integer, Boolean> assignment) {
 
         for (List<Integer>  clause : clauses) {
 
@@ -72,9 +74,9 @@ public class DeterministicAlgorithm {
     }
 
     protected boolean ClauseSatisfied(List<Integer> clause, Map<Integer,Boolean> assignment ) {
-        int  var;
+
         for(int lit : clause){
-            var = Math.abs(lit) ;
+       int  var = Math.abs(lit) ;
             if (assignment.containsKey(var) && assignment.get(var) != lit<0) {
                 return  true;
             }
@@ -82,8 +84,14 @@ public class DeterministicAlgorithm {
         return false;
     }
     protected List<List<Integer>> simplifyClauses(List<List<Integer>> clauses, int literal) {
-          List<List<Integer>> simplifiedClauses = new ArrayList<>(clauses);
-          //TODO
+          List<List<Integer>> simplifiedClauses = new ArrayList<>();
+          List<Integer> templateClause;
+       for (List<Integer> clause : clauses) {
+           if (clause.contains(literal)) continue; // ignore it
+           templateClause = new ArrayList<>(clause) ;
+           templateClause.remove(Integer.valueOf(-9)); // if the negation exist remove it
+           simplifiedClauses.add(templateClause);
+       }
         return simplifiedClauses;
     }
 
@@ -99,13 +107,16 @@ public class DeterministicAlgorithm {
 
     protected Set<Map<Integer,Boolean>> genAssignments( List<Integer> vars) {
         Set<Map<Integer,Boolean>> result = new HashSet<>();
-        Map<Integer,Boolean> template =  new HashMap<>();
+        Map<Integer,Boolean> template ;
         int n = vars.size();
         int power = 1 << n;
          for (int i = 0 ; i < power ; i++) {
-             template = null;
-             for (int j = 0 ; j < n ; j++) {
-
+             template = new HashMap<>();
+             int j = 0 ;
+             for (int v : vars ) {
+              // take the j_th component of i
+                 template.put(v,(1 & (i>>j)) == 1);
+                 j++;
              }
                  result.add(template);
 
@@ -115,7 +126,40 @@ public class DeterministicAlgorithm {
     }
 
 
+  // will be overridden by inheritors if they are defined
+    @Override
+    public SatResult solve(CnfFormula formula) {
+        System.out.println("By default, Danstin's and al.'s algorithm is implemented for deterministic algorithms");
+        return new Danstin().solve(formula);
+    }
 
+    public  void Output(CnfFormula formula) {
+
+        long startTime = System.currentTimeMillis();
+        SatResult result = this.solve(formula);
+        long endTime = System.currentTimeMillis();
+
+        //____Output
+        System.out.println("\n|\t"+this.getClass().getSimpleName() + " approach\t|\t deterministic\t|\n");
+        if (result.satisfiable()) {
+            System.out.println("Satisfiable\n");
+
+            Map<Integer, Boolean> certificateTree = new TreeMap<>(result.certificate());
+
+            int cnt = 0 ;
+            System.out.println("Certificate:");
+            for (Map.Entry<Integer, Boolean> assign : certificateTree.entrySet()) {
+                cnt++;
+                System.out.print("|\t" + assign.getKey() + ":\t " + (assign.getValue() ? "T" : "F") + "\t");
+                if ( cnt % 10 ==0 ) { System.out.println("|");}
+            }
+          if(cnt %10 != 0)  System.out.println("|"); // only add last | if we have no new line
+        } else {
+            System.out.println("Unsatisfiable!");
+        }
+        System.out.println("\n Time taken: " + (endTime - startTime) + " ms \n");
+
+    }
 
 
 

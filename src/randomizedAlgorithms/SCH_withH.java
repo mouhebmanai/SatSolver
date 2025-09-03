@@ -14,33 +14,44 @@ public class SCH_withH extends RandomizedAlgorithm implements CNFSATSolver {
     private boolean ClauseWeighing;
     private boolean SmallestNextClause ;
     private  boolean NextLiteral ;
-   public  SCH_withH() {
-       super();
-       Repetitions   = 10_000;
-       DoubleSided = true;
-       InitialCleanup = true ;
-       ClauseWeighing = true ;
-       SmallestNextClause = true;
-       NextLiteral = true;
-   }
+    public  SCH_withH() {
+        super();
+        Repetitions   = 10_000;
+        DoubleSided = true;
+        InitialCleanup = true ;
+        ClauseWeighing = false ;
+        SmallestNextClause = true;
+        NextLiteral = true;
+    }
 
-   public SCH_withH(long seed, int repetitions,boolean doubleSided, boolean initialCleanup,
-                    boolean clauseWeighing, boolean SmallestNextClause, boolean nextLiteral
-   ) {
-       super(seed);
-       this.Repetitions   = repetitions;
-       this.DoubleSided = doubleSided;
-       this.InitialCleanup = initialCleanup ;
-       this.ClauseWeighing = clauseWeighing ;
-       this.SmallestNextClause = SmallestNextClause;
-       this.NextLiteral = nextLiteral;
+    public SCH_withH(long seed, int repetitions,boolean doubleSided, boolean initialCleanup,
+                     boolean clauseWeighing, boolean SmallestNextClause, boolean nextLiteral
+    ) {
+        super(seed);
+        this.Repetitions   = repetitions;
+        this.DoubleSided = doubleSided;
+        this.InitialCleanup = initialCleanup ;
+        this.ClauseWeighing = clauseWeighing ;
+        this.SmallestNextClause = SmallestNextClause;
+        this.NextLiteral = nextLiteral;
 
-   }
+    }
+
+    public SCH_withH(long seed) {
+        super(seed);
+        Repetitions   = 10_000;
+        DoubleSided = true;
+        InitialCleanup = true ;
+        ClauseWeighing = true ;
+        SmallestNextClause = true;
+        NextLiteral = true;
+    }
+
 
     @Override
     public SatResult solve(CnfFormula formula) {
         return isClauseWeighing() ? schH_CW(formula,  Repetitions) : schH_No_CW(formula,  Repetitions)  ;
-   }
+    }
 
     /**
      * Main Schoening aglorithm's codes
@@ -54,7 +65,7 @@ public class SCH_withH extends RandomizedAlgorithm implements CNFSATSolver {
         Map<Integer, Boolean>   beta ;
         if (isInitialCleanup())  { formula = clean_Formula(formula); }
         // initially each clause has weight = 1
-      // Weight of clauses increase if they are not satisfied after a phase
+        // Weight of clauses increase if they are not satisfied after a phase
         List<WeightedClause> weightedClauses = new ArrayList<>() ;
         for (List<Integer> c : formula.clauses()) {
             weightedClauses.add(new WeightedClause(c,1));
@@ -70,11 +81,15 @@ public class SCH_withH extends RandomizedAlgorithm implements CNFSATSolver {
 
                 // check if the flipped assignment satisfy  all the clauses
                 if(isDoubleSided()) {
-                 Map<Integer,Boolean> flipped =   flip(beta);
+                    Map<Integer,Boolean> flipped =   flip(beta);
+                    boolean Satisfied = true;
                     for (List<Integer> clause : formula.clauses()) {
-                        if(!ClauseSatisfied(clause,flipped)) break;
+                        if(!ClauseSatisfied(clause,flipped)) {
+                            Satisfied = false;
+                            break;
+                        }
                     }
-                      return new SatResult(true,flipped)   ;
+                 if(Satisfied)   return new SatResult(true,flipped)   ;
                 }
 
                 // pick unsatisfied clause from the queue based on the clauses that were found unsatisfied the most
@@ -99,11 +114,11 @@ public class SCH_withH extends RandomizedAlgorithm implements CNFSATSolver {
                 beta.put(val, !beta.get(val));
 
             }
-          // increase the weight of unsatisfied clauses
+            // increase the weight of unsatisfied clauses
             for (WeightedClause weightedClause : weightedClauses) {
                 if (ClauseSatisfied(weightedClause.clause(),beta)) {
                     // take old weight and add 1
-                      weightedClause.setWeight(weightedClause.weight()+1);
+                    weightedClause.setWeight(weightedClause.weight()+1);
                 }
             }
 
@@ -111,8 +126,8 @@ public class SCH_withH extends RandomizedAlgorithm implements CNFSATSolver {
         return new SatResult(false,null);
     }
     private SatResult schH_No_CW(CnfFormula formula,  int Repetitions) {
-           // remove all the variables that obeys OLR and PLR
-      if (isInitialCleanup())  { formula = clean_Formula(formula); }
+        // remove all the variables that obeys OLR and PLR
+        if (isInitialCleanup())  { formula = clean_Formula(formula); }
 
         Map<Integer, Boolean>  beta ;
         for (int i = 0 ; i < Repetitions ; i++) {
@@ -125,11 +140,16 @@ public class SCH_withH extends RandomizedAlgorithm implements CNFSATSolver {
 
                 if(isDoubleSided()) {
                     Map<Integer,Boolean> flipped =   flip(beta);
+                    boolean Satisfied = true;
                     for (List<Integer> clause : formula.clauses()) {
-                        if(!ClauseSatisfied(clause,flipped)) break;
+                        if(!ClauseSatisfied(clause,flipped)) {
+                            Satisfied = false;
+                            break;
+                        }
                     }
-                    return new SatResult(true,flipped)   ;
+                    if(Satisfied)   return new SatResult(true,flipped)   ;
                 }
+
 
                 // pick unsatisfied clause
                 List<Integer> pickedClause = isSmallestNextClause()? Smallest_Pick_UClause(formula.clauses(),beta)
@@ -172,24 +192,24 @@ public class SCH_withH extends RandomizedAlgorithm implements CNFSATSolver {
         //____Output
         System.out.println("\n| Schoening approach with Heurstics | Randomized |\n ");
         System.out.println("Possible Heuristics:\n"
-        + "DoubleSidedCheck\t:\t"+ isDoubleSided()
-         + "\nInitialCleanup\t:\t" + isInitialCleanup()
-        + "\nClauseWeighing\t:\t" + isClauseWeighing()
-         + "\nSmallestNextClause\t:\t" + isSmallestNextClause()
-         + "\nNextLiteral\t:\t" + isNextLiteral() +"\n\n"
+                + "DoubleSidedCheck\t:\t"+ isDoubleSided()
+                + "\nInitialCleanup\t:\t" + isInitialCleanup()
+                + "\nClauseWeighing\t:\t" + isClauseWeighing()
+                + "\nSmallestNextClause\t:\t" + isSmallestNextClause()
+                + "\nNextLiteral\t:\t" + isNextLiteral() +"\n\n"
         );
 
         if (result.satisfiable()) {
             System.out.println("Satisfiable\n");
             Map<Integer, Boolean> certificateTree = new TreeMap<>(result.certificate());
-            int cnt = 0 ;
+           /* int cnt = 0 ;
             System.out.println("Certificate:");
             for (Map.Entry<Integer, Boolean> assign : certificateTree.entrySet()) {
                 cnt++;
                 System.out.print("|\t" + assign.getKey() + ":\t " + (assign.getValue() ? "T" : "F") + "\t");
                 if ( cnt % 10 ==0 ) { System.out.println("|");}
             }
-            System.out.println("|");
+            if ( cnt % 10 !=0 )  System.out.println("|"); */
         } else {
 
             int k = formula.type();
@@ -204,51 +224,51 @@ public class SCH_withH extends RandomizedAlgorithm implements CNFSATSolver {
 
     // The following part contains only getters and setters
 
-        public boolean isDoubleSided () {
+    public boolean isDoubleSided () {
         return DoubleSided;
     }
 
-        public void setDoubleSided ( boolean doubleSided){
+    public void setDoubleSided ( boolean doubleSided){
         DoubleSided = doubleSided;
     }
 
-        public boolean isInitialCleanup () {
+    public boolean isInitialCleanup () {
         return InitialCleanup;
     }
 
-        public void setInitialCleanup ( boolean initialCleanup){
+    public void setInitialCleanup ( boolean initialCleanup){
         this.InitialCleanup = initialCleanup;
     }
 
-        public boolean isClauseWeighing () {
+    public boolean isClauseWeighing () {
         return ClauseWeighing;
     }
 
-        public void setClauseWeighing ( boolean clauseWeighing){
+    public void setClauseWeighing ( boolean clauseWeighing){
         ClauseWeighing = clauseWeighing;
     }
 
-        public boolean isSmallestNextClause () {
+    public boolean isSmallestNextClause () {
         return SmallestNextClause;
     }
 
-        public void setSmallestNextClause ( boolean sNextClause){
+    public void setSmallestNextClause ( boolean sNextClause){
         this.SmallestNextClause = sNextClause;
     }
 
-        public boolean isNextLiteral () {
+    public boolean isNextLiteral () {
         return NextLiteral;
     }
 
-        public void setNextLiteral ( boolean nextLiteral){
+    public void setNextLiteral ( boolean nextLiteral){
         this.NextLiteral = nextLiteral;
     }
 
-        public int getRepetitions () {
+    public int getRepetitions () {
         return Repetitions;
     }
 
-        public void setRepetitions ( int repetitions){
+    public void setRepetitions ( int repetitions){
         Repetitions = repetitions;
     }
 

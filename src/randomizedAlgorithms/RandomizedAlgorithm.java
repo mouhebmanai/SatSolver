@@ -31,7 +31,7 @@ public class RandomizedAlgorithm {
 
     }
 
-   public Map<Integer, Boolean> Random_init (CnfFormula formula) {
+    public Map<Integer, Boolean> Random_init (CnfFormula formula) {
 
         Map<Integer,Boolean> beta = new HashMap<>();
 
@@ -43,12 +43,12 @@ public class RandomizedAlgorithm {
 
     }
     public boolean ClauseSatisfied(List<Integer> clause, Map<Integer,Boolean> assignment ) {
-             int  var;
+        int  var;
 
         for(int lit : clause){
             var = Math.abs(lit) ;
 
-                    // present and true iff literal is positive (aka not negated)
+            // present and true iff literal is positive (aka not negated)
             if (assignment.containsKey(var) && assignment.get(var) != lit<0) {
                 return  true;
             }
@@ -95,7 +95,7 @@ public class RandomizedAlgorithm {
                     for (List<Integer> clause : clauses) {
                         clause.removeIf(literal -> literal == -finalUnitLiteral);
                     }
-                 variables.remove(Math.abs(unitLiteral));
+                    variables.remove(Math.abs(unitLiteral));
                 }
             } while (unitClauseFound);
 
@@ -121,7 +121,7 @@ public class RandomizedAlgorithm {
                         break;
                     }
                 }
-                 if (purePositive|| pureNegative) pureLiterals.add(variable);
+                if (purePositive|| pureNegative) pureLiterals.add(variable);
 
             }
 
@@ -157,25 +157,25 @@ public class RandomizedAlgorithm {
             // clauses  C unsatisfied <=> (forall var in C : var negated <=> assignment is true)
             boolean satisfied = false ;
 
-              for (int literal : clause) {
+            for (int literal : clause) {
 
-                  int var = Math.abs(literal);
-                  if(assignment.get(var) !=  literal < 0) {
+                int var = Math.abs(literal);
+                if(assignment.get(var) !=  literal < 0) {
                     satisfied = true;
                     break;
-                  }
+                }
 
 
-               }
+            }
 
-            if(!satisfied) UnsatisfiedClauses.add(clause);
+            if(!satisfied) return  clause;
 
         }
         if (UnsatisfiedClauses.isEmpty()) {
             return null;
         }
 
-   return UnsatisfiedClauses.get(rand.nextInt(UnsatisfiedClauses.size()));
+        return UnsatisfiedClauses.get(rand.nextInt(UnsatisfiedClauses.size()));
 
     }
 
@@ -188,7 +188,7 @@ public class RandomizedAlgorithm {
      */
     protected List<Integer> Smallest_Pick_UClause(List<List<Integer>> clauses, Map<Integer, Boolean> assignment) {
         List<List<Integer>> SmallestUnsatisfiedClauses = new ArrayList<>();
-          int minSize = Integer.MAX_VALUE;
+        int minSize = Integer.MAX_VALUE;
         for (List<Integer>  clause : clauses) {
 
             // clauses  C unsatisfied <=> (forall var in C : var negated <=> assignment is true)
@@ -244,21 +244,21 @@ public class RandomizedAlgorithm {
             return null;
         }
 
-       // List of highest weights
+        // List of highest weights
         List<WeightedClause> highest_Priority = new ArrayList<>();
         for (WeightedClause wClause : Clauses ) {
             if (wClause.weight() == maxWeight) highest_Priority.add(wClause);
         }
 
 
-       return  highest_Priority.get(rand.nextInt(highest_Priority.size())).clause();
+        return  highest_Priority.get(rand.nextInt(highest_Priority.size())).clause();
 
     }
 
     protected  int Highly_frequent_literal(List<List<Integer>> Clauses,List<Integer> clause) {
         if (Clauses == null || clause == null || clause.isEmpty()) {
-        return 0 ; }
-         int highest = -1;
+            return 0 ; }
+        int highest = -1;
         int max  = -1;
 
         for (int literal : clause) {
@@ -283,11 +283,11 @@ public class RandomizedAlgorithm {
      */
     Map<Integer, Boolean> flip( Map<Integer, Boolean>  assignment) {
         Map<Integer, Boolean> newAssignment = new HashMap<>() ;
-           if (assignment == null) return  newAssignment;
+        if (assignment == null) return  newAssignment;
 
-           for(Map.Entry<Integer, Boolean> entry : assignment.entrySet()) {
-               newAssignment.put(entry.getKey(), !entry.getValue());
-           }
+        for(Map.Entry<Integer, Boolean> entry : assignment.entrySet()) {
+            newAssignment.put(entry.getKey(), !entry.getValue());
+        }
 
         return newAssignment;
     }
