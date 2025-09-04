@@ -6,7 +6,7 @@ The program is designed to parse boolean formulas in the
 DIMACS CNF format and determine if they are satisfiable.
 Instances are taken from https://www.cs.ubc.ca/~hoos/SATLIB/benchm.html.
 
-##  <span style="color: red;"> Parsing  and Formatting </span
+##  <span style="color: red;"> Parsing  and Formatting </span>
 ### <span style="color: blue;"> Parsing </span>
 For the  parsing of the formulas in DIMACS format, the class ParseCnf can be used
 it currently contains the  functions :
