@@ -20,7 +20,7 @@ import helpers.*;
  * @flip takes in an assignment and flip all its values
  */
 
-public class RandomizedAlgorithm {
+public class RandomizedAlgorithm implements CNFSATSolver {
 
     protected final Random rand ;
     public RandomizedAlgorithm(){
@@ -296,5 +296,41 @@ public class RandomizedAlgorithm {
     public Random getRand() {
         return rand;
     }
+
+    @Override
+    public SatResult solve(CnfFormula formula) {
+        System.out.println(" By default Schoening's algorithm is used");
+        return new pureSCH().solve(formula);
+    }
+
+    @Override
+    public void Output(CnfFormula formula) {
+
+        long startTime = System.currentTimeMillis();
+        SatResult result = this.solve(formula);
+        long endTime = System.currentTimeMillis();
+
+        //____Output
+        System.out.println("\n|\t"+this.getClass().getSimpleName() + " approach\t|\t deterministic\t|\n");
+        if (result.satisfiable()) {
+            System.out.println("Satisfiable\n");
+
+            Map<Integer, Boolean> certificateTree = new TreeMap<>(result.certificate());
+
+            int cnt = 0 ;
+            System.out.println("Certificate:");
+            for (Map.Entry<Integer, Boolean> assign : certificateTree.entrySet()) {
+                cnt++;
+                System.out.print("|\t" + assign.getKey() + ":\t " + (assign.getValue() ? "T" : "F") + "\t");
+                if ( cnt % 10 ==0 ) { System.out.println("|");}
+            }
+            if(cnt %10 != 0)  System.out.println("|"); // only add last | if we have no new line
+        } else {
+            System.out.println("likely Unsatisfiable!");
+        }
+        System.out.println("\n Time taken: " + (endTime - startTime) + " ms \n");
+
+    }
+
 
 }

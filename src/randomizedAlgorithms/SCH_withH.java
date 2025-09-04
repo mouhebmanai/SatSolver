@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
-public class SCH_withH extends RandomizedAlgorithm implements CNFSATSolver {
+public class SCH_withH extends RandomizedAlgorithm  {
 
     private int Repetitions;
     private boolean DoubleSided ;
@@ -48,7 +48,7 @@ public class SCH_withH extends RandomizedAlgorithm implements CNFSATSolver {
     }
 
 
-    @Override
+
     public SatResult solve(CnfFormula formula) {
         return isClauseWeighing() ? schH_CW(formula,  Repetitions) : schH_No_CW(formula,  Repetitions)  ;
     }
@@ -182,7 +182,7 @@ public class SCH_withH extends RandomizedAlgorithm implements CNFSATSolver {
         return new SatResult(false,null);
     }
 
-    @Override
+
     public void Output(CnfFormula formula) {
         long startTime = System.currentTimeMillis();
         SatResult result = this.solve(formula);
@@ -202,14 +202,14 @@ public class SCH_withH extends RandomizedAlgorithm implements CNFSATSolver {
         if (result.satisfiable()) {
             System.out.println("Satisfiable\n");
             Map<Integer, Boolean> certificateTree = new TreeMap<>(result.certificate());
-           /* int cnt = 0 ;
+            int cnt = 0 ;
             System.out.println("Certificate:");
             for (Map.Entry<Integer, Boolean> assign : certificateTree.entrySet()) {
                 cnt++;
                 System.out.print("|\t" + assign.getKey() + ":\t " + (assign.getValue() ? "T" : "F") + "\t");
                 if ( cnt % 10 ==0 ) { System.out.println("|");}
             }
-            if ( cnt % 10 !=0 )  System.out.println("|"); */
+            if ( cnt % 10 !=0 )  System.out.println("|");
         } else {
 
             int k = formula.type();

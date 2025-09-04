@@ -10,7 +10,7 @@ import helpers.*;
  *   Similar to Schoening's algorithm in the class pureSCH
  *   To be implemented mainly for formulas in 2-SAT with a solution expected to be found in quadratic time
  */
-public class Papadimitriou extends RandomizedAlgorithm implements  CNFSATSolver {
+public class Papadimitriou extends RandomizedAlgorithm  {
 
     // how many phases of 2n^2 should we have
     private int Repetitions;
@@ -46,7 +46,7 @@ public class Papadimitriou extends RandomizedAlgorithm implements  CNFSATSolver 
 
 
 
-    @Override
+
     public SatResult solve(CnfFormula formula) {
         // in case no initial assignment is given, generate randomly
         Map<Integer,Boolean> assignment  = beta_0 == null ? Random_init(formula) : beta_0;
@@ -83,7 +83,7 @@ public class Papadimitriou extends RandomizedAlgorithm implements  CNFSATSolver 
     }
 
 
-    @Override
+
     public void Output(CnfFormula formula) {
         long startTime = System.currentTimeMillis();
         SatResult result = this.solve(formula);

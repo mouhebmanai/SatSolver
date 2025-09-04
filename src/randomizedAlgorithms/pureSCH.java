@@ -8,7 +8,7 @@ import helpers.*;
  *   Repetitions gives the number of phases wanted (more => smaller error rate + less efficiency )
  *   Heuristics set if added heuristic is wanted for the algorithm (see paper)
  */
-public class pureSCH extends RandomizedAlgorithm implements  CNFSATSolver{
+public class pureSCH extends RandomizedAlgorithm{
 
     private int Repetitions;
 
@@ -44,7 +44,7 @@ public class pureSCH extends RandomizedAlgorithm implements  CNFSATSolver{
 
 
 
-    @Override
+
     public SatResult solve(CnfFormula formula) {
         return sch(formula,  Repetitions);
 
@@ -92,7 +92,7 @@ public class pureSCH extends RandomizedAlgorithm implements  CNFSATSolver{
 
     }
 
-    @Override
+
     public void Output(CnfFormula formula) {
         long startTime = System.currentTimeMillis();
         SatResult result = this.solve(formula);
