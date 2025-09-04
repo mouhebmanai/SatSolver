@@ -107,14 +107,14 @@ public class pureSCH extends RandomizedAlgorithm{
 
             Map<Integer, Boolean> certificateTree = new TreeMap<>(result.certificate());
             int cnt = 0 ;
-            /*
+
             System.out.println("Certificate:");
             for (Map.Entry<Integer, Boolean> assign : certificateTree.entrySet()) {
                 cnt++;
                 System.out.print("|\t" + assign.getKey() + ":\t " + (assign.getValue() ? "T" : "F") + "\t");
                 if ( cnt % 10 ==0 ) { System.out.println("|");}
             }
-            if ( cnt % 10 !=0 )  System.out.println("|"); */
+            if ( cnt % 10 !=0 )  System.out.println("|");
         } else {
             int  k = formula.type();
           double   value = Repetitions * 2.0 / 3.0 * Math.pow(k /(2.0* (k-1)), formula.NumberOfVariables());
