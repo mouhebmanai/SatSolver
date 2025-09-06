@@ -76,8 +76,7 @@ public class pureSCH extends RandomizedAlgorithm{
                     return new SatResult(true,beta);
                 }
 
-             int rando =  rand.nextInt(pickedClause.size());
-                System.out.println(rando);
+
                 int pickedLiteral = pickedClause.get(rand.nextInt(pickedClause.size())) ;
                 int val = Math.abs(pickedLiteral);
 

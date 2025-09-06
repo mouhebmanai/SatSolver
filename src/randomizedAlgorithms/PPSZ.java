@@ -21,6 +21,8 @@ public class PPSZ extends RandomizedAlgorithm  {
 
         // Preprocess : Resolve
         List<List<Integer>> clauses = Resolve(formula.clauses(),s);
+        // if the empty set is resolved => unsatisfiable
+        if (clauses.contains(new ArrayList<>())) return   new SatResult(false,null);
         CnfFormula resolvedFormula = new CnfFormula(formula.type(),
                                                         clauses,
                                                         formula.variables(),
