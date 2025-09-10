@@ -1,0 +1,279 @@
+CNF403/CBS_k3_n100_m403_b10_0.cnf
+
+
+seed	1	  :	4436
+seed	2	  :	4395
+seed	3	  :	12841
+seed	4	  :	1086
+seed	5	  :	42002
+seed	6	  :	38046
+seed	7	  :	24377
+seed	8	  :	26742
+seed	9	  :	22976
+seed	10	  :	10425
+seed	11	  :	9995
+seed	12	  :	27875
+seed	13	  :	7553
+seed	14	  :	5821
+seed	15	  :	9307
+CNF403/CBS_k3_n100_m403_b10_1.cnf
+
+
+seed	1	  :	49593
+seed	2	  :	17700
+seed	3	  :	237172
+seed	4	  :	584355
+seed	5	  :	278231
+seed	6	  :	24805
+seed	7	  :	599848
+seed	8	  :	43986
+seed	9	  :	118282
+seed	10	  :	54615
+seed	11	  :	560012
+seed	12	  :	375426
+seed	13	  :	637290
+seed	14	  :	432010
+seed	15	  :	20795
+CNF403/CBS_k3_n100_m403_b10_2.cnf
+Parsing successful:	  101 variables,	405 clauses.
+The formula is in  3-CNF
+
+seed	1	  :	1498
+seed	2	  :	5454
+seed	3	  :	5393
+seed	4	  :	2107
+seed	5	  :	6991
+seed	6	  :	8025
+seed	7	  :	9642
+seed	8	  :	6383
+seed	9	  :	2479
+seed	10	  :	795
+seed	11	  :	15650
+seed	12	  :	13022
+seed	13	  :	10470
+seed	14	  :	1126
+seed	15	  :	19605
+CNF403/CBS_k3_n100_m403_b10_3.cnf
+
+
+seed	1	  :	150667
+seed	2	  :	58597
+seed	3	  :	14471
+seed	4	  :	168963
+seed	5	  :	175498
+seed	6	  :	1338
+seed	7	  :	378906
+seed	8	  :	468839
+seed	9	  :	168772
+seed	10	  :	21133
+seed	11	  :	14642
+seed	12	  :	399584
+seed	13	  :	40221
+seed	14	  :	248095
+seed	15	  :	19157
+CNF403/CBS_k3_n100_m403_b10_4.cnf
+
+
+seed	1	  :	17
+seed	2	  :	967
+seed	3	  :	5715
+seed	4	  :	6347
+seed	5	  :	5273
+seed	6	  :	4044
+seed	7	  :	581
+seed	8	  :	1348
+seed	9	  :	1720
+seed	10	  :	1851
+seed	11	  :	3041
+seed	12	  :	1959
+seed	13	  :	1962
+seed	14	  :	5002
+seed	15	  :	5371
+CNF403/CBS_k3_n100_m403_b10_5.cnf
+
+
+seed	1	  :	1972
+seed	2	  :	79204
+seed	3	  :	32908
+seed	4	  :	7958
+seed	5	  :	9480
+seed	6	  :	12526
+seed	7	  :	8463
+seed	8	  :	19919
+seed	9	  :	7084
+seed	10	  :	36099
+seed	11	  :	9166
+seed	12	  :	20576
+seed	13	  :	1775
+seed	14	  :	8616
+seed	15	  :	8419
+CNF403/CBS_k3_n100_m403_b10_6.cnf
+
+
+seed	1	  :	394718
+seed	2	  :	187932
+seed	3	  :	257631
+seed	4	  :	27546
+seed	5	  :	129740
+seed	6	  :	338436
+seed	7	  :	58167
+seed	8	  :	493848
+seed	9	  :	124447
+seed	10	  :	43559
+seed	11	  :	852440
+seed	12	  :	6560
+seed	13	  :	222044
+seed	14	  :	491373
+seed	15	  :	113834
+
+
+CNF403/CBS_k3_n100_m403_b10_7.cnf
+
+
+seed	1	  :	2359
+seed	2	  :	32398
+seed	3	  :	12757
+seed	4	  :	1018
+seed	5	  :	48298
+seed	6	  :	1131
+seed	7	  :	46800
+seed	8	  :	1868
+seed	9	  :	647
+seed	10	  :	4383
+seed	11	  :	14551
+seed	12	  :	34558
+seed	13	  :	31995
+seed	14	  :	14557
+seed	15	  :	10089
+
+CNF403/CBS_k3_n100_m403_b10_8.cnf
+
+
+seed	1	  :	22919
+seed	2	  :	3799
+seed	3	  :	52919
+seed	4	  :	53364
+seed	5	  :	21752
+seed	6	  :	50398
+seed	7	  :	675
+seed	8	  :	3867
+seed	9	  :	42682
+seed	10	  :	14418
+seed	11	  :	16569
+seed	12	  :	7108
+seed	13	  :	32292
+seed	14	  :	6035
+seed	15	  :	9943
+
+CNF403/CBS_k3_n100_m403_b10_9.cnf
+
+
+seed	1	  :	1293
+seed	2	  :	4760
+seed	3	  :	55976
+seed	4	  :	30380
+seed	5	  :	38424
+seed	6	  :	1706
+seed	7	  :	599
+seed	8	  :	1916
+seed	9	  :	69804
+seed	10	  :	9618
+seed	11	  :	12799
+seed	12	  :	9091
+seed	13	  :	8882
+seed	14	  :	59833
+seed	15	  :	22442
+
+CNF403/CBS_k3_n100_m403_b10_10.cnf
+
+
+seed	1	  :	13473
+seed	2	  :	6523
+seed	3	  :	193
+seed	4	  :	1364
+seed	5	  :	337
+seed	6	  :	368
+seed	7	  :	257
+seed	8	  :	7283
+seed	9	  :	7317
+seed	10	  :	6218
+seed	11	  :	4332
+seed	12	  :	3813
+seed	13	  :	409
+seed	14	  :	13566
+seed	15	  :	11837
+
+CNF403/CBS_k3_n100_m403_b10_11.cnf
+
+
+seed	1	  :	6165
+seed	2	  :	32066
+seed	3	  :	40480
+seed	4	  :	24086
+seed	5	  :	6722
+seed	6	  :	36172
+seed	7	  :	22225
+seed	8	  :	2541
+seed	9	  :	7461
+seed	10	  :	36621
+seed	11	  :	24530
+seed	12	  :	38003
+seed	13	  :	24144
+seed	14	  :	19402
+seed	15	  :	12796
+
+CNF403/CBS_k3_n100_m403_b10_12.cnf
+
+
+seed	1	  :	400
+seed	2	  :	1148
+seed	3	  :	8741
+seed	4	  :	26381
+seed	5	  :	8448
+seed	6	  :	23101
+seed	7	  :	42987
+seed	8	  :	1522
+seed	9	  :	3652
+seed	10	  :	4508
+seed	11	  :	24567
+seed	12	  :	6247
+seed	13	  :	3135
+seed	14	  :	9947
+seed	15	  :	3754
+CNF403/CBS_k3_n100_m403_b10_13.cnf
+
+
+seed	1	  :	179643
+seed	2	  :	8891
+seed	3	  :	16247
+seed	4	  :	75012
+seed	5	  :	4440
+seed	6	  :	93084
+seed	7	  :	12503
+seed	8	  :	33129
+seed	9	  :	137722
+seed	10	  :	15900
+seed	11	  :	63977
+seed	12	  :	7581
+seed	13	  :	17099
+seed	14	  :	6204
+seed	15	  :	41426
+CNF403/CBS_k3_n100_m403_b10_14.cnf
+
+
+seed	1	  :	45070
+seed	2	  :	19108
+seed	3	  :	13472
+seed	4	  :	3881
+seed	5	  :	27800
+seed	6	  :	8791
+seed	7	  :	32575
+seed	8	  :	37759
+seed	9	  :	33606
+seed	10	  :	23485
+seed	11	  :	4731
+seed	12	  :	2366
+seed	13	  :	57052
+seed	14	  :	52822
+seed	15	  :	13540
+

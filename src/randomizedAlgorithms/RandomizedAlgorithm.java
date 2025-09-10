@@ -168,7 +168,7 @@ public class RandomizedAlgorithm implements CNFSATSolver {
 
             }
 
-            if(!satisfied) return  clause;
+            if(!satisfied)   UnsatisfiedClauses.add(clause);
 
         }
         if (UnsatisfiedClauses.isEmpty()) {

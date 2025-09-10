@@ -91,7 +91,39 @@ public class pureSCH extends RandomizedAlgorithm{
 
     }
 
+    public int sch_steps(CnfFormula formula,  int Repetitions) {
 
+        Map<Integer, Boolean>   beta ;
+
+        for (int i = 0 ; i < Repetitions ; i++) {
+            //initialize the assignment
+            beta =  Random_init(formula);
+
+            // do  one phase
+            for(int j = 0 ;  j < 3* formula.NumberOfVariables() ; j++ ) {
+                // pick unsatisfied clause
+                List<Integer>  pickedClause = Random_Pick_UClause(formula.clauses(),beta);
+
+                if (pickedClause == null) {
+                    // all clauses are satisfied
+                    //  System.out.println("\n\n| Number of  phases  run is " + i + " |") ;
+                    return i;
+                }
+
+
+                int pickedLiteral = pickedClause.get(rand.nextInt(pickedClause.size())) ;
+                int val = Math.abs(pickedLiteral);
+
+                //flip the value
+                beta.put(val, !beta.get(val));
+
+            }
+
+
+        }
+        return Repetitions;
+
+    }
     public void Output(CnfFormula formula) {
         long startTime = System.currentTimeMillis();
         SatResult result = this.solve(formula);

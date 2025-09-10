@@ -55,6 +55,13 @@ public class SearchWithRadius extends  DeterministicAlgorithm  {
             return new SatResult(false, null);
         }
 
+        if (clauses.isEmpty()) {
+            return new SatResult(true, new HashMap<>());
+        }
+        if (clauses.contains(Collections.emptyList())) {
+            return  new SatResult(false,null);
+        }
+
         List<Integer> PickedClause =Pick_UClause(clauses,beta);
         // if beta satisfies F then return (yes, beta)
         if (PickedClause == null) {

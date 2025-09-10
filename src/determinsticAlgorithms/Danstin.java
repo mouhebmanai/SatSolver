@@ -9,6 +9,14 @@ public class Danstin extends DeterministicAlgorithm   {
     // split the variables in 6 parts and create a covering code , search for each word in the covering code
     // search happen online, i.e. every center is for covering code is checked with search exactly the moment it is created
     // and is never stored
+  private  final  boolean greedy ;  // tells if the code should be created by a greedy approach
+
+    public Danstin() {
+        greedy = false;
+    }
+    public  Danstin(boolean greedy) {
+        this.greedy = greedy;
+    }
     @Override
     public SatResult solve(CnfFormula formula) {
 
@@ -20,41 +28,48 @@ public class Danstin extends DeterministicAlgorithm   {
             variables.add(num+1); // assumption: variables are of the form 1,2,3,....,n
             num++;
         }
+
         int r = (int) Math.ceil(num / (double) (formula.type() +1 ) ) ;
         // now create codes for each partition
 
+        List<Integer> vars = variables.subList( 0 , (num/6)) ;
 
-        List<Integer> vars;
-        List<List<Map<Integer, Boolean>>> Codes = new ArrayList<>(6) ;
-        for  (int i = 0  ; i < 6 ; i++) {
+        List<Map<Integer, Boolean>> Codes = this.greedy ?greedyCreateCoveringCode(vars, r/6)  :
+                                                            RandomCreateCoveringCode(vars,r/6);
 
-            vars = variables.subList(i * (num/6) , (i+1)*(num/6)) ;
-           List<Map<Integer, Boolean>> code_i = greedyCreateCoveringCode(vars, r/6) ;
-               Codes.add(code_i);
-        }
-
+        System.out.println("Danstin et al. : each partial code has size "+ Codes.size());
         // recursively create cover code centers and check if they can find a satisfying assignment
-        return ConcatAndSearch(formula.clauses(),  Codes, new HashMap<>(), r,0);
+        return ConcatAndSearch(num/6,formula.clauses(),  Codes, new HashMap<>(), r,0);
     }
 
-    private SatResult ConcatAndSearch(List<List<Integer>> clauses , List<List<Map<Integer, Boolean>>> codes, Map<Integer, Boolean> current, int r, int pointer) {
+    private SatResult ConcatAndSearch(int num, List<List<Integer>> clauses , List<Map<Integer, Boolean>> codes, Map<Integer, Boolean> current, int r, int pointer) {
         // variation of concatCodesRecursive (below) but when a code is created it is directly used in search
-        if (pointer == codes.size()) {
+        if (pointer == 6) {
             // Now, run the search for the center found
             SearchWithRadius search= new SearchWithRadius();
             return search.search(clauses, r, current);
         }
 
 
-        // Get the list of centers for the current step. (like the other version)
-        List<Map<Integer, Boolean>> toBeConcatenated = codes.get(pointer);
+        // Get the list of centers for the current step.
+        List<Map<Integer, Boolean>> toBeConcatenated = new ArrayList<>();
+        for (Map<Integer, Boolean> code :codes) {
+            Map<Integer, Boolean> CodeMap = new HashMap<>();
+            for (Map.Entry<Integer, Boolean> entry : code.entrySet()) {
+                CodeMap.put(entry.getKey() + num*pointer, entry.getValue());
+
+            }
+            toBeConcatenated.add(CodeMap);
+        }
+
+
         // Iterate through  centers :
         for (Map<Integer, Boolean> partialCode : toBeConcatenated) {
             // Create the new level of the code
             Map<Integer, Boolean> next = new HashMap<>(current);
             next.putAll(partialCode); // same idea from the other version
             // branch to the next partition.
-            SatResult result = ConcatAndSearch(clauses, codes, next, r, pointer + 1);
+            SatResult result = ConcatAndSearch(num,clauses, codes, next, r, pointer + 1);
             // If the recursive call found a solution,  we are done!
             if (result.satisfiable()) {
                 return result;
@@ -91,12 +106,9 @@ public class Danstin extends DeterministicAlgorithm   {
             List<Map<Integer, Boolean>> code_i = greedyCreateCoveringCode(vars, r/6) ;
             Codes.add(code_i);
         }
-
-        List<Map<Integer,Boolean>> code = new ArrayList<>();
         // now concatenate the codes
+        List<Map<Integer,Boolean>> code = concatCodes(Codes);
 
-        System.out.println( concatCodes(Codes) );
-        System.out.println(code);
 
 
          // now search for each center
@@ -116,11 +128,26 @@ public class Danstin extends DeterministicAlgorithm   {
 //_____________ needed helper functions for Danstin and al algorithm (to be moved to DeterministicAlgorithm.java if
 //_____________ other det. algorithms need them)
 
+    /**
+     * generates covering codes by simply choosing a new center at random each time until every assignment is covered
+     * @param vars variables
+     * @param r radius
+     * @return the covering code as per Danstin and al.
+     */
+    public List<Map<Integer, Boolean>> RandomCreateCoveringCode(List<Integer> vars, int r) {
+        List<Map<Integer, Boolean>> Result = new ArrayList<>();
+        Set<Map<Integer,Boolean>> NotCovered = genAssignments(vars);
+        while (!NotCovered.isEmpty()) {
+            // just pick a random center from the NotCovered set
+            Map<Integer, Boolean> cover = NotCovered.iterator().next();
+            NotCovered.removeIf(a -> HammingDistance(a, cover)<=r);
+            Result.add(cover);
+        }
 
+     return Result;
+    }
 
     /**
-     * !!! Attention vars is turned into a list (instead of set in other parts) because
-     *    order is needed for the splitting !!!
      * @param vars variables
      * @param r radius
      * @return the covering code as per Danstin and al.
@@ -163,6 +190,8 @@ public class Danstin extends DeterministicAlgorithm   {
     }
 
 
+
+    // the following part can be used in case different codes are to be used for different partitions
 
     /**
      *
@@ -209,12 +238,10 @@ public class Danstin extends DeterministicAlgorithm   {
                result.add(concatenation);
             }
         }
-        System.out.println("concat done " + pointer);
-        System.out.println(result.get(0));
+
 
         return result;
     }
-
 
 
 
