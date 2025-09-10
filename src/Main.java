@@ -20,7 +20,7 @@ public class Main {
                    CnfFormula formula = ParseCnf.parseKCnf(filePath, 200, 10);
                    double avgofSteps = 0;
 
-                   for (long s = 14; s <= Seed;  s++) {
+                   for (long s = 0; s <= Seed;  s++) {
                        int steps =  new pureSCH(s).sch_steps(formula,Integer.MAX_VALUE);
                    avgofSteps += ((double) steps)/Seed;
 
