@@ -18,6 +18,11 @@ public class Papadimitriou extends RandomizedAlgorithm  {
     //initial assignment
     private final Map<Integer, Boolean> beta_0 ;
 
+
+    public  Papadimitriou( long seed) {
+        super(seed);
+        beta_0 = null;
+    }
     public Papadimitriou(int Repetitions,long Seed, Map<Integer, Boolean> beta_0) {
         super(Seed);
         this.Repetitions = Repetitions;
@@ -67,7 +72,6 @@ public class Papadimitriou extends RandomizedAlgorithm  {
 
             if (pickedClause == null) {
                 // all clauses are satisfied
-                System.out.println("\n\n| Number of  phases  run is " + i + " |") ;
                 return new SatResult(true,beta);
             }
             int pickedLiteral = pickedClause.get(rand.nextInt(pickedClause.size())) ;
@@ -80,6 +84,27 @@ public class Papadimitriou extends RandomizedAlgorithm  {
         }
 
         return new SatResult(false,null);
+    }
+
+    public int papa_steps(CnfFormula formula) {
+        Map<Integer,Boolean>  beta =  Random_init(formula);
+        for (int  i = 0 ; i < Integer.MAX_VALUE ; i++) {
+            List<Integer>  pickedClause = Random_Pick_UClause(formula.clauses(),beta);
+
+            if (pickedClause == null) {
+                // all clauses are satisfied
+                return i ;
+            }
+            int pickedLiteral = pickedClause.get(rand.nextInt(pickedClause.size())) ;
+            int val = Math.abs(pickedLiteral);
+
+            //flip the value
+            beta.put(val, !beta.get(val));
+
+
+        }
+
+     throw new RuntimeException("Algorithm could not find a solution in Integer.MAX_VALUE steps !");
     }
 
 

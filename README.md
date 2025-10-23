@@ -1,7 +1,7 @@
-This project is a collection of various algorithms implemented in Java   <span style="color: grey;">(another version in c may follow) </span>
+This project is a collection of various algorithms implemented in Java  
 to solve the Boolean Satisfiability Problem (SAT).
 It includes classic deterministic algorithms and
-stochastic local search methods. 
+stochastic local search methods. These algorithm are also split in two types; local search algorithms and Davis Putnam algorithms.
 The program is designed to parse boolean formulas in the
 DIMACS CNF format and determine if they are satisfiable.
 Instances are taken from https://www.cs.ubc.ca/~hoos/SATLIB/benchm.html.
@@ -37,21 +37,23 @@ It will be extended with the other algorithms, once they are implemented.
 ###  Randomized Algorithms 
 They all inherit the class RandomizedAlgorithms and heavily  rely on functions defined there. \
 Presented algorithms :
-* Papadimitirou's algorithm : implement papadimitriou's algorithm for 2-SAT
+* Papadimitirou's algorithm (Local Search (_LS_)): implement papadimitriou's algorithm for 2-SAT
   (A simple and elegant randomized algorithm which "only" run in quadratic time)
-* Schoening's algorithm : a simple algorithm implemented in two different classes 
+* Schoening's algorithm (_LS_): a simple algorithm implemented in two different classes 
   * pureSCH : here the pure algorithm based on complete randomness is presented
   * SCH_withH : some other heuristics are added to the algorithm
-* PPSZ :  improvement on the previous algorithm that uses resolution
-* Hertli : to be implemented
+* PPSZ (_DP_):  improvement on the previous algorithm that uses resolution
+* Hertli (_DP_): generalizes PPSZ's unique 3 and 4-SAT bounds to the general case by introducing
+ S-implication instead of resolution.
 
 
 ###   Deterministic Algorithms
 They all inherit the class DeterministicAlgorithms\
 Presented algorithms :
-* DPLL : Davis-Putnam-Logemann-Loveland: A classic, complete, 
+* DPLL (_DP_): Davis-Putnam-Logemann-Loveland: A classic, complete, 
 backtracking-based algorithm that is guaranteed to find a solution.
-* Danstin and al. : A deterministic algorithm for k-SAT that runs in $(O((1.5)^n)$ for 3-SAT and is based on derandomization.
-* Moser-Scheder : to be implemented
+* Danstin and al. (_LS_): A deterministic algorithm for k-SAT that runs in $(O((1.5)^n)$ for 3-SAT and is based on derandomization.
+* Moser-Scheder (_LS_): improve the bound of the backtracking search algorithm, and represents a full derandomization 
+of Schöning's algorithm.
 * Liu : to be implemented
 

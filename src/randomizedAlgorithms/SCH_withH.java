@@ -1,10 +1,7 @@
 package randomizedAlgorithms;
 import helpers.*;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 
 public class SCH_withH extends RandomizedAlgorithm  {
 
@@ -39,11 +36,11 @@ public class SCH_withH extends RandomizedAlgorithm  {
 
     public SCH_withH(long seed) {
         super(seed);
-        Repetitions   = 10_000;
-        DoubleSided = true;
-        InitialCleanup = true ;
-        ClauseWeighing = true ;
-        SmallestNextClause = true;
+        Repetitions   = Integer.MAX_VALUE;
+        DoubleSided = false;
+        InitialCleanup = false ;
+        ClauseWeighing = false ;
+        SmallestNextClause = false;
         NextLiteral = true;
     }
 
@@ -116,7 +113,7 @@ public class SCH_withH extends RandomizedAlgorithm  {
             }
             // increase the weight of unsatisfied clauses
             for (WeightedClause weightedClause : weightedClauses) {
-                if (ClauseSatisfied(weightedClause.clause(),beta)) {
+                if (!ClauseSatisfied(weightedClause.clause(),beta)) {
                     // take old weight and add 1
                     weightedClause.setWeight(weightedClause.weight()+1);
                 }
@@ -125,10 +122,12 @@ public class SCH_withH extends RandomizedAlgorithm  {
         }
         return new SatResult(false,null);
     }
+
+
+
     private SatResult schH_No_CW(CnfFormula formula,  int Repetitions) {
         // remove all the variables that obeys OLR and PLR
         if (isInitialCleanup())  { formula = clean_Formula(formula); }
-
         Map<Integer, Boolean>  beta ;
         for (int i = 0 ; i < Repetitions ; i++) {
 
@@ -165,7 +164,7 @@ public class SCH_withH extends RandomizedAlgorithm  {
 
 
                 int pickedLiteral = isNextLiteral() ?
-                        Highly_frequent_literal(formula.clauses(), pickedClause) :
+                        stochastic_literal_selection(formula.clauses(), pickedClause) :
                         pickedClause.get(rand.nextInt(pickedClause.size())) ;
 
 
@@ -181,6 +180,109 @@ public class SCH_withH extends RandomizedAlgorithm  {
         }
         return new SatResult(false,null);
     }
+   public int  schH_No_CW_steps(CnfFormula formula,  int Repetitions) {
+
+        Map<Integer, Boolean>  beta ;
+        int num = 0;
+
+       for (int i = 0 ; i < Repetitions ; i++) {
+
+            //initialize the assignment
+            beta   = Random_init(formula);
+
+            // do  one phase
+           for(int j = 0 ;  j < 3* formula.NumberOfVariables() ; j++ ) {
+
+                if(isDoubleSided()) {
+                    Map<Integer,Boolean> flipped =   flip(beta);
+                    boolean Satisfied = true;
+                    for (List<Integer> clause : formula.clauses()) {
+                        if(!ClauseSatisfied(clause,flipped)) {
+                            Satisfied = false;
+                            break;
+                        }
+                    }
+                    if(Satisfied) {
+                        return i;
+                    }
+                }
+
+
+                // pick unsatisfied clause
+                List<Integer> pickedClause = /*isSmallestNextClause()? Smallest_Pick_UClause(formula.clauses(),beta)
+                        :*/ Random_Pick_UClause(formula.clauses(),beta);
+
+
+                if (pickedClause == null) {
+                    // all clauses are satisfied
+                   // System.out.println("\n\n| Number of  phases  run is " + i + " |") ;
+
+                      return i;
+                }
+
+
+                int pickedLiteral = isNextLiteral() ?
+                        stochastic_literal_selection(formula.clauses(), pickedClause) :
+                        pickedClause.get(rand.nextInt(pickedClause.size())) ;
+
+
+
+
+
+                int val = Math.abs(pickedLiteral);
+
+                //flip the value
+
+                beta.put(val, !beta.get(val));
+
+
+           }
+           for (List<Integer> clause : formula.clauses()) {
+               if (ClauseSatisfied(clause,beta)) {
+                   num++;
+               }
+           }
+
+
+
+        }
+      throw new RuntimeException("no solution found");
+
+   }
+
+
+   public boolean doubleSided_test(CnfFormula formula, Map<Integer,Boolean> beta) {
+       for(int j = 0 ;  j < 3* formula.NumberOfVariables() ; j++ ) {
+           // pick unsatisfied clause
+           List<Integer>  pickedClause = Random_Pick_UClause(formula.clauses(),beta);
+           Map<Integer,Boolean> flipped =   flip(beta);
+           boolean Satisfied = true;
+           for (List<Integer> clause : formula.clauses()) {
+               if(!ClauseSatisfied(clause,flipped)) {
+                   Satisfied = false;
+                   break;
+               }
+           }
+           if(Satisfied) {
+               return true;
+           }
+
+           if (pickedClause == null) {
+
+               return false;
+           }
+
+
+           int pickedLiteral = pickedClause.get(rand.nextInt(pickedClause.size())) ;
+           int val = Math.abs(pickedLiteral);
+
+           //flip the value
+           beta.put(val, !beta.get(val));
+
+       }
+
+        return false;
+   }
 
 
     public void Output(CnfFormula formula) {

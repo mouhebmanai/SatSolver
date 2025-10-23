@@ -1,0 +1,166 @@
+Parsing: CNF403/CBS_k3_n100_m403_b10_0.cnf
+Parsing successful:	  100 variables,	403 clauses.
+The formula is in  3-CNF
+
+seed	1		Steps:	1652
+seed	2		Steps:	819
+seed	3		Steps:	816
+seed	4		Steps:	4787
+seed	5		Steps:	870
+seed	6		Steps:	4282
+seed	7		Steps:	1926
+seed	8		Steps:	1194
+seed	9		Steps:	11777
+seed	10		Steps:	395
+seed	11		Steps:	5145
+seed	12		Steps:	4141
+seed	13		Steps:	5000
+seed	14		Steps:	521
+seed	15		Steps:	1090
+Parsing: CNF403/CBS_k3_n100_m403_b10_1.cnf
+Parsing successful:	  100 variables,	403 clauses.
+The formula is in  3-CNF
+
+seed	1		Steps:	58400
+seed	2		Steps:	130947
+seed	3		Steps:	56871
+seed	4		Steps:	90556
+seed	5		Steps:	231583
+seed	6		Steps:	3321
+seed	7		Steps:	223751
+seed	8		Steps:	370430
+seed	9		Steps:	57771
+seed	10		Steps:	676812
+seed	11		Steps:	100431
+seed	12		Steps:	54645
+seed	13		Steps:	66677
+seed	14		Steps:	57992
+seed	15		Steps:	10959
+Parsing: CNF403/CBS_k3_n100_m403_b10_2.cnf
+Parsing successful:	  101 variables,	405 clauses.
+The formula is in  3-CNF
+
+seed	1		Steps:	485
+seed	2		Steps:	582
+seed	3		Steps:	798
+seed	4		Steps:	1775
+seed	5		Steps:	232
+seed	6		Steps:	3232
+seed	7		Steps:	976
+seed	8		Steps:	264
+seed	9		Steps:	1764
+seed	10		Steps:	220
+seed	11		Steps:	2430
+seed	12		Steps:	3021
+seed	13		Steps:	333
+seed	14		Steps:	666
+seed	15		Steps:	553
+Parsing: CNF403/CBS_k3_n100_m403_b10_3.cnf
+Parsing successful:	  100 variables,	403 clauses.
+The formula is in  3-CNF
+
+seed	1		Steps:	19624
+seed	2		Steps:	22315
+seed	3		Steps:	94347
+seed	4		Steps:	45465
+seed	5		Steps:	36327
+seed	6		Steps:	165322
+seed	7		Steps:	35034
+seed	8		Steps:	94301
+seed	9		Steps:	133195
+seed	10		Steps:	87825
+seed	11		Steps:	78519
+seed	12		Steps:	64173
+seed	13		Steps:	65132
+seed	14		Steps:	14728
+seed	15		Steps:	4195
+Parsing: CNF403/CBS_k3_n100_m403_b10_4.cnf
+Parsing successful:	  100 variables,	403 clauses.
+The formula is in  3-CNF
+
+seed	1		Steps:	1229
+seed	2		Steps:	51
+seed	3		Steps:	5506
+seed	4		Steps:	2451
+seed	5		Steps:	2740
+seed	6		Steps:	25203
+seed	7		Steps:	501
+seed	8		Steps:	125
+seed	9		Steps:	2255
+seed	10		Steps:	651
+seed	11		Steps:	424
+seed	12		Steps:	3536
+seed	13		Steps:	12869
+seed	14		Steps:	270
+seed	15		Steps:	1275
+Parsing: CNF403/CBS_k3_n100_m403_b10_5.cnf
+Parsing successful:	  100 variables,	403 clauses.
+The formula is in  3-CNF
+
+seed	1		Steps:	2461
+seed	2		Steps:	14599
+seed	3		Steps:	4904
+seed	4		Steps:	3480
+seed	5		Steps:	2777
+seed	6		Steps:	3390
+seed	7		Steps:	824
+seed	8		Steps:	1331
+seed	9		Steps:	2043
+seed	10		Steps:	11298
+seed	11		Steps:	25007
+seed	12		Steps:	12692
+seed	13		Steps:	5141
+seed	14		Steps:	10176
+seed	15		Steps:	2795
+Parsing: CNF403/CBS_k3_n100_m403_b10_6.cnf
+Parsing successful:	  100 variables,	403 clauses.
+The formula is in  3-CNF
+
+seed	1		Steps:	130061
+seed	2		Steps:	198382
+seed	3		Steps:	676158
+seed	4		Steps:	293527
+seed	5		Steps:	138532
+seed	6		Steps:	246780
+seed	7		Steps:	256007
+seed	8		Steps:	77942
+seed	9		Steps:	612717
+seed	10		Steps:	542852
+seed	11		Steps:	119459
+seed	12		Steps:	426726
+seed	13		Steps:	73820
+seed	14		Steps:	456585
+
+
+Backbone size :
+10
+steps	1	1652		steps	2	819		steps	3	816		steps	4	4787		steps	5	870		steps	6	4282		steps	7	1926		steps	8	1194		steps	9	11777		steps	10	395		steps	11	5145		steps	12	4141		steps	13	5000		steps	14	521		steps	15	1090
+average	0	2960.9999999999995
+steps	1	58400		steps	2	130947		steps	3	56871		steps	4	90556		steps	5	231583		steps	6	3321		steps	7	223751		steps	8	370430		steps	9	57771		steps	10	676812		steps	11	100431		steps	12	54645		steps	13	66677		steps	14	57992		steps	15	10959
+average	1	146076.4
+steps	1	485		steps	2	582		steps	3	798		steps	4	1775		steps	5	232		steps	6	3232		steps	7	976		steps	8	264		steps	9	1764		steps	10	220		steps	11	2430		steps	12	3021		steps	13	333		steps	14	666		steps	15	553
+average	2	1155.4
+steps	1	19624		steps	2	22315		steps	3	94347		steps	4	45465		steps	5	36327		steps	6	165322		steps	7	35034		steps	8	94301		steps	9	133195		steps	10	87825		steps	11	78519		steps	12	64173		steps	13	65132		steps	14	14728		steps	15	4195
+average	3	64033.46666666665
+steps	1	1229		steps	2	51		steps	3	5506		steps	4	2451		steps	5	2740		steps	6	25203		steps	7	501		steps	8	125		steps	9	2255		steps	10	651		steps	11	424		steps	12	3536		steps	13	12869		steps	14	270		steps	15	1275
+average	4	3939.066666666667
+steps	1	2461		steps	2	14599		steps	3	4904		steps	4	3480		steps	5	2777		steps	6	3390		steps	7	824		steps	8	1331		steps	9	2043		steps	10	11298		steps	11	25007		steps	12	12692		steps	13	5141		steps	14	10176		steps	15	2795
+average	5	6861.199999999999
+steps	1	130061		steps	2	198382		steps	3	676158		steps	4	293527		steps	5	138532		steps	6	246780		steps	7	256007		steps	8	77942		steps	9	612717		steps	10	542852		steps	11	119459		steps	12	426726		steps	13	73820		steps	14	456585 steps	15 898870
+average 6   343227.87
+steps	1	756		steps	2	235		steps	3	5065		steps	4	5652		steps	5	3084		steps	6	43		steps	7	427		steps	8	1362		steps	9	7383		steps	10	2469		steps	11	3250		steps	12	2672		steps	13	248		steps	14	11328		steps	15	2189
+average	7	3077.5333333333338
+steps	1	112877		steps	2	142493		steps	3	13469		steps	4	240664		steps	5	107015		steps	6	71601		steps	7	265817		steps	8	91131		steps	9	107966		steps	10	699019		steps	11	216940		steps	12	6457		steps	13	77869		steps	14	128907		steps	15	22387
+average	8	153640.8
+steps	1	681		steps	2	8095		steps	3	3054		steps	4	1397		steps	5	228		steps	6	1707		steps	7	14272		steps	8	18775		steps	9	3162		steps	10	8080		steps	11	6253		steps	12	694		steps	13	7165		steps	14	1095		steps	15	4992
+average	9	5310.0
+steps	1	253		steps	2	453		steps	3	394		steps	4	3940		steps	5	416		steps	6	622		steps	7	2064		steps	8	5276		steps	9	1777		steps	10	231		steps	11	294		steps	12	402		steps	13	182		steps	14	303		steps	15	2412
+average	10	1267.9333333333334
+steps	1	2529		steps	2	2067		steps	3	694		steps	4	3974		steps	5	5192		steps	6	479		steps	7	864		steps	8	3776		steps	9	25882		steps	10	21025		steps	11	33250		steps	12	347		steps	13	6558		steps	14	3730		steps	15	2725
+average	11	7539.466666666666
+steps	1	2104		steps	2	2987		steps	3	530		steps	4	8103		steps	5	1384		steps	6	233		steps	7	2166		steps	8	1596		steps	9	2429		steps	10	15619		steps	11	7336		steps	12	1011		steps	13	8692		steps	14	737		steps	15	3490
+average	12	3894.4666666666667
+steps	1	2482		steps	2	7995		steps	3	8826		steps	4	1058		steps	5	8922		steps	6	568		steps	7	12953		steps	8	16781		steps	9	7425		steps	10	12895		steps	11	2365		steps	12	2928		steps	13	4287		steps	14	460		steps	15	636
+average	13	6038.733333333334
+steps	1	8111		steps	2	1581		steps	3	27483		steps	4	19615		steps	5	4266		steps	6	5022		steps	7	21417		steps	8	5667		steps	9	7778		steps	10	12770		steps	11	3236		steps	12	32323		steps	13	30221		steps	14	568		steps	15	2455
+average	14	12167.533333333333

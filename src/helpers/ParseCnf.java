@@ -27,7 +27,7 @@ public class ParseCnf {
         List<List<Integer>> clauses = new ArrayList<>();
         BufferedReader buffer = new BufferedReader(new FileReader(filePath));
         String line;
-        int RealmaxClausesize = 0;
+        int RealMaxClauseSize = 0;
         while ((line = buffer.readLine()) != null) {
             line = line.trim();
             if (line.startsWith("c") || line.isEmpty()) {
@@ -52,7 +52,7 @@ public class ParseCnf {
 
                 if (!clause.isEmpty()) {
                     clauses.add(clause);
-                    if (clause.size() > RealmaxClausesize) RealmaxClausesize = clause.size();
+                    if (clause.size() > RealMaxClauseSize) RealMaxClauseSize = clause.size();
                 }
             }
 
@@ -71,9 +71,9 @@ public class ParseCnf {
         System.out.println("Parsing successful:\t  " +
                 Variables.size()+ " variables,\t" +
                 clauses.size() + " clauses.");
-         System.out.println("The formula is in  " + RealmaxClausesize + "-CNF \n");
+         System.out.println("The formula is in  " + RealMaxClauseSize + "-CNF \n");
 
-        return new CnfFormula(RealmaxClausesize, clauses,Variables, Variables.size(), clauses.size());
+        return new CnfFormula(RealMaxClauseSize, clauses,Variables, Variables.size(), clauses.size());
 
     }
 

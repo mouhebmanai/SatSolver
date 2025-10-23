@@ -1,0 +1,201 @@
+
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	0	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	1	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	2	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	3	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	1		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	4	0.05
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	5	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	6	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	7	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	1		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	8	0.05
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	9	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	1		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	10	0.05
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	11	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	12	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	1		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	13	0.05
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	14	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	15	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	16	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	17	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	18	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	19	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	20	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	21	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	22	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	23	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	24	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	25	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	1		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	26	0.05
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	27	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	28	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	29	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	30	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	31	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	32	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	33	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	34	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	1		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	35	0.05
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	36	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	37	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	38	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	39	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	40	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	1		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	41	0.05
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	42	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	43	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	44	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	45	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	46	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	47	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	1		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	48	0.05
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	49	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	50	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	51	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	52	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	53	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	54	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	55	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	56	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	57	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	58	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	59	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	60	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	61	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	62	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	63	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	64	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	65	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	66	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	67	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	1		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	68	0.05
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	69	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	70	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	71	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	72	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	73	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	74	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	1		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	75	0.05
+steps	1	0		steps	2	0		steps	3	0		steps	4	1		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	76	0.05
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	1		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	77	0.05
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	78	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	79	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	80	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	81	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	82	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	83	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	1		steps	20	0		
+average	84	0.05
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	85	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	86	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	87	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	88	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	89	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	90	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	91	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	92	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	93	0.0
+steps	1	0		steps	2	0		steps	3	1		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	94	0.05
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	95	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	96	0.0
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	97	0.0
+steps	1	1		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	1		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	98	0.1
+steps	1	0		steps	2	0		steps	3	0		steps	4	0		steps	5	0		steps	6	0		steps	7	0		steps	8	0		steps	9	0		steps	10	0		steps	11	0		steps	12	0		steps	13	0		steps	14	0		steps	15	0		steps	16	0		steps	17	0		steps	18	0		steps	19	0		steps	20	0		
+average	99	0.0

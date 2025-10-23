@@ -37,7 +37,4 @@ public record SatResult(boolean satisfiable, Map<Integer, Boolean> certificate) 
     }
 
 
-
-
-
 }
