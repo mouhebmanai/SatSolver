@@ -8,7 +8,9 @@ public class Main {
 
 
 
-
+/**
+ ** The main class contains some benchmark functions, all of them are below the main function
+ **/
     public static void main(String[] args) {
 
     ppsz_Benchmark(20);
@@ -314,7 +316,7 @@ public class Main {
                 //change with respect to the solver
 
                 CNFSATSolver DPLL = new DPLL();
-                Danstin dan = new Danstin(true);
+                Dantsin dan = new Dantsin(true);
                 SearchWithRadius swr = new SearchWithRadius();
                 pureSCH sch = new pureSCH();
                 long startTime = System.currentTimeMillis();

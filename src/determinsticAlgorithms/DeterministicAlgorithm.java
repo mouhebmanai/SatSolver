@@ -129,8 +129,8 @@ public class DeterministicAlgorithm implements CNFSATSolver {
   // will be overridden by inheritors if they are defined
     @Override
     public SatResult solve(CnfFormula formula) {
-        System.out.println("By default, Danstin's and al.'s algorithm is implemented for deterministic algorithms");
-        return new Danstin().solve(formula);
+        System.out.println("By default, Dantsin's and al.'s algorithm is implemented for deterministic algorithms");
+        return new Dantsin().solve(formula);
     }
 
     public  void Output(CnfFormula formula) {

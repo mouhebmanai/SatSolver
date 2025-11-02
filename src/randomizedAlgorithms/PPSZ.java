@@ -43,24 +43,14 @@ public class PPSZ extends RandomizedAlgorithm  {
     }
     public  int ppsz_steps(CnfFormula formula) {
 
-        // Preprocess : Resolve
-      /*  List<List<Integer>> clauses = Resolve(formula.clauses(),s);
-        // if the empty set is resolved => unsatisfiable
-        if (clauses.contains(new ArrayList<Integer>())) return   -1;
-        CnfFormula resolvedFormula = new CnfFormula(formula.type(),
-                clauses,
-                formula.variables(),
-                formula.NumberOfVariables(),
-                clauses.size() );
-        System.out.println("clauses:"+ clauses.size());
-*/
+     // resolution is excluded and only included in tests in the functions in the main class
 
         List<Integer> listedVars = new ArrayList<>(formula.variables());
 
         // Preprocess is done
         // now search
         for (int i = 0 ; i < I ; i++) {
-   if(i%50_000 == 0 ) System.out.println(i);
+
             List<Integer> permutation  = create_random_permutation(listedVars);
 
             Map<Integer,Boolean> assignment = Random_init(formula);
@@ -85,7 +75,7 @@ public class PPSZ extends RandomizedAlgorithm  {
         do {
             newClauseAdded = false;
             List<List<Integer>> newClauses = new ArrayList<>();
-            System.out.println(resultingClauses.size());
+
             for (int i = 0 ; i < resultingClauses.size() ; i++) {
 
                 for (int j = i+1 ; j < resultingClauses.size() ; j++) {
@@ -106,6 +96,39 @@ public class PPSZ extends RandomizedAlgorithm  {
 
         return resultingClauses;
     }
+
+    // s-bounded resoltuion but up to some limit for the number of clauses before running the search algorithm
+    public List<List<Integer>> limited_Resolve(List<List<Integer>> clauses , int s, int limit)  {
+        List<List<Integer>> resultingClauses = new ArrayList<>(clauses);
+        Set<Set<Integer>> visitedClauses = new HashSet<>(); // only needed for lookup => set is enough
+
+
+        boolean newClauseAdded;
+
+        do {
+            newClauseAdded = false;
+            List<List<Integer>> newClauses = new ArrayList<>();
+           if (resultingClauses.size()> limit) break;
+            for (int i = 0 ; i < resultingClauses.size() ; i++) {
+                for (int j = i+1 ; j < resultingClauses.size() ; j++) {
+                    List<Integer> resolvent = ResolveAPair(resultingClauses.get(i), resultingClauses.get(j), s);
+
+                    if (resolvent != null && visitedClauses.add(new HashSet<>(resolvent))) {
+                        newClauses.add(resolvent);
+                        newClauseAdded  = true;
+                    }
+
+                }
+
+            }
+
+            resultingClauses.addAll(newClauses);
+        } while (newClauseAdded);
+
+
+        return resultingClauses;
+    }
+
     private List<Integer> ResolveAPair(List<Integer> first, List<Integer> second, int s) {
         if(first.size() > s || second.size()> s) {
             return null;
@@ -184,7 +207,7 @@ public class PPSZ extends RandomizedAlgorithm  {
      return resultingClauses;
     }
 
-
+// some small tests for the algorithm
     public static void main(String[] args) {
      List<Integer> list1 = new ArrayList<>();
      list1.add(1);
