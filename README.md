@@ -21,7 +21,10 @@ formulas are defined as CnfFormula objects , they contain 5 components
 * A set of variables : the variables present in the formula
 * the number of variables
 * the number of clauses
+##  <span style="color: blue;"> SatGenerator </span>
+SatGenerator is a small help program, that bases itself on taking (or generating) an assignment as a parameter. For a given number of values per formula,number of clauses, number of variables per clause and some seed it generated a formula which is satisfied by that given assignment.
 ##  <span style="color: blue;"> Presented algorithms </span>
+
 In this project a variation randomized and deterministic algorithms is applied.
 
 They all implement the interface CNFSATSolver in which common needed procedures are defined. Currently, they implement 
