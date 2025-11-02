@@ -92,7 +92,7 @@ public class DPLL extends DeterministicAlgorithm  {
      * @param clauses The list of clauses.
      * @return A map of variable assignments derived from unit clauses.
      */
-    private Map<Integer, Boolean> OneLiteralRuleVars(List<List<Integer>> clauses) {
+    public Map<Integer, Boolean> OneLiteralRuleVars(List<List<Integer>> clauses) {
         Map<Integer, Boolean> assignments = new HashMap<>();
         for (List<Integer> clause : clauses) {
             if (clause.size() == 1) {
@@ -117,7 +117,7 @@ public class DPLL extends DeterministicAlgorithm  {
      * @param clauses The list of clauses.
      * @return A map of variable assignments derived from pure literals.
      */
-    private Map<Integer, Boolean> findPureLiterals(List<List<Integer>> clauses) {
+    public Map<Integer, Boolean> findPureLiterals(List<List<Integer>> clauses) {
         Set<Integer> literals = new HashSet<>();
         Set<Integer> variables = new HashSet<>();
         for (List<Integer> clause : clauses) {

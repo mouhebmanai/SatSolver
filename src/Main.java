@@ -10,7 +10,8 @@ public class Main {
 
 
     public static void main(String[] args) {
-       ppsz_Benchmark(20);
+
+    ppsz_Benchmark(20);
     }
 
     public  static void initial_cleanup_Benchmark () {
@@ -45,7 +46,7 @@ public class Main {
                for (long i = 1000; i < 2000; i++) {
                    double average = 0;
                   System.out.println(i);
-                   CnfFormula formula = SatGenerator.generate(i, n, 2, (int) (4.03*n));
+                   CnfFormula formula = SatGenerator.generate(i, n, 3, (int) (4.03*n));
 
                    for (long seed = Seed; seed < Seed + 100; seed++) {
 
@@ -75,17 +76,17 @@ public class Main {
        }
    }
     public static void ppsz_Benchmark(long Seed) {
-        String buffered = "PPSZ_Benchmark_Steps_clauses_15.txt";
+        String buffered = "PPSZ_test_50_variables_20_instances_2_limit_50_000.txt";
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(buffered))) {
                     double sum = 0;
                 //writer.write("Backbone size :\t\n" + j);
                 writer.newLine();
-                for (int i = 0 ; i < 100; i++) {
-                   // String filePath = "CNF403/CBS_k3_n100_m403_b"+j+"_"+i+".cnf";
-                    //CnfFormula formula = ParseCnf.parseKCnf(filePath, 101, 10);
-                    CnfFormula formula = SatGenerator.generate(i+100,15,3,78);
+                for (int i = 1 ; i < 21; i++) {
+                    String filePath = "uf50/uf50-0"+i+".cnf";
+                   CnfFormula formula = ParseCnf.parseKCnf(filePath, 101, 10);
+
                     double avgofSteps = 0;
-                    PPSZ ppsz = new PPSZ(1,Integer.MAX_VALUE,4);
+                  PPSZ ppsz = new PPSZ(1,Integer.MAX_VALUE,4);
                     List<List<Integer>> clauses = ppsz.Resolve(formula.clauses(),4);
                     if (clauses.contains(new ArrayList<Integer>())) throw new RuntimeException(" ");
                     CnfFormula resolvedFormula = new CnfFormula(formula.type(),
@@ -93,14 +94,15 @@ public class Main {
                             formula.variables(),
                             formula.NumberOfVariables(),
                             clauses.size() );
+                    writer.write("clauses:"+ clauses.size() +"\n");
                     System.out.println("clauses:"+ clauses.size());
                     for (long s = 1; s <=  Seed;  s++) {
                      // int steps =  new SCH_withH(s).schH_No_CW_steps(formula,Integer.MAX_VALUE);
-                     //   int steps = new pureSCH(s).sch_steps(formula,Integer.MAX_VALUE);
-                            ppsz =  new PPSZ(s,Integer.MAX_VALUE,4);
-                        // if the empty set is resolved => unsatisfiable
+                    // int steps = new pureSCH(s).sch_steps(formula,Integer.MAX_VALUE);
+                        ppsz =  new PPSZ(s,Integer.MAX_VALUE,4);
 
-                        int steps = ppsz.ppsz_steps(resolvedFormula);
+
+                       int steps = ppsz.ppsz_steps(resolvedFormula);
                         if (steps == -1)  {
                             System.out.println("problem");
                             break;
@@ -131,24 +133,27 @@ public class Main {
 
     }
 
-    public static void SCH_Benchmark(long Seed) {
-        String buffered = "sch_Benchmark_Steps.txt";
+    public static void ppz_Benchmark(long Seed) {
+        String buffered = "sch_test_50_variables_20_instances.txt";
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(buffered))) {
             double sum = 0;
-            //writer.write("Backbone size :\t\n" + j);
-            writer.newLine();
-            for (int i = 0 ; i < 100; i++) {
+            double avgofSteps = 0;
 
-                CnfFormula formula = SatGenerator.generate(i+100,20,3,86);
-                double avgofSteps = 0;
+            writer.newLine();
+            for (int i = 1 ; i < 21; i++) {
+                String filePath = "uf50/uf50-0"+i+".cnf";
+                CnfFormula formula = ParseCnf.parseKCnf(filePath, 101, 10);
+
 
                 for (long s = 1; s <=  Seed;  s++) {
                     // int steps =  new SCH_withH(s).schH_No_CW_steps(formula,Integer.MAX_VALUE);
-                       int steps = new pureSCH(s).sch_steps(formula,Integer.MAX_VALUE);
-
-                    // if the empty set is resolved => unsatisfiable
-
-
+                     int steps = new pureSCH(s).sch_steps(formula,Integer.MAX_VALUE);
+             //      PPSZ ppsz =  new PPSZ(s,Integer.MAX_VALUE,4);
+                   // int steps = ppsz.ppsz_steps(formula);
+                    if (steps == -1)  {
+                        System.out.println("problem");
+                        break;
+                    }
                     avgofSteps += ((double) steps)/Seed;
 
                     System.out.println("seed\t"+s+"\t\tSteps:\t"+steps);
@@ -174,6 +179,48 @@ public class Main {
 
 
     }
+
+    public static void SCH_Benchmark(long Seed) {
+        String buffered = "Sch_Benchmark_Steps_nextliteral_50.txt";
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(buffered))) {
+
+
+            for (int j = 50; j < 90; j = j + 40) {
+                writer.write("Backbone size :\t\n" + j);
+                writer.newLine();
+                for (int i = 0; i < 15; i++) {
+                    String filePath = "CNF403/CBS_k3_n100_m403_b"+j+"_"+i+".cnf";
+                    CnfFormula formula = ParseCnf.parseKCnf(filePath, 200, 10);
+                    double avgofSteps = 0;
+
+                    for (long s = 1; s <= Seed;  s++) {
+
+                        int steps =  new SCH_withH(s).schH_No_CW_steps(formula,Integer.MAX_VALUE);
+                        // int steps =  new pureSCH(s).sch_steps(formula,Integer.MAX_VALUE);
+                        avgofSteps += ((double) steps)/Seed;
+
+                        System.out.println("seed\t"+s+"\t is done\tSteps:\t"+steps);
+                        writer.write("steps\t"+s +"\t"+steps+"\t\t");
+
+                    }
+                    writer.newLine();
+                    writer.write("average\t"+i +"\t"+avgofSteps);
+                    writer.newLine();
+
+                }
+
+            }
+
+
+
+
+        } catch (IOException e) {
+            System.out.println("error reading");
+        }
+
+
+    }
+
     public static void SCH_ratio_Benchmark() {
         String buffered = "Sch_ratio_benchmark5";
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(buffered))) {

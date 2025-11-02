@@ -52,8 +52,6 @@ They all inherit the class DeterministicAlgorithms\
 Presented algorithms :
 * DPLL (_DP_): Davis-Putnam-Logemann-Loveland: A classic, complete, 
 backtracking-based algorithm that is guaranteed to find a solution.
-* Danstin and al. (_LS_): A deterministic algorithm for k-SAT that runs in $(O((1.5)^n)$ for 3-SAT and is based on derandomization.
-* Moser-Scheder (_LS_): improve the bound of the backtracking search algorithm, and represents a full derandomization 
-of Schöning's algorithm.
-* Liu : to be implemented
+* Dantsin and al. (_LS_): A deterministic algorithm for k-SAT that runs in $(O((1.5)^n)$ for 3-SAT and is based on derandomization.
+
 

@@ -30,7 +30,7 @@ public class ParseCnf {
         int RealMaxClauseSize = 0;
         while ((line = buffer.readLine()) != null) {
             line = line.trim();
-            if (line.startsWith("c") || line.isEmpty()) {
+            if (line.startsWith("c") || line.isEmpty() || line.startsWith("%") ) {
                 continue;
             }
             // first line

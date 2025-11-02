@@ -1,0 +1,61 @@
+
+clauses:55640
+steps	1	1643		steps	2	3989		steps	3	2293		steps	4	936		steps	5	4105		steps	6	823		steps	7	1092		steps	8	5226		steps	9	6653		steps	10	3442		steps	11	2588		steps	12	489		steps	13	2246		steps	14	1083		steps	15	2910		steps	16	1862		steps	17	592		steps	18	475		steps	19	506		steps	20	2102		
+average	1	2252.75
+clauses:167019
+steps	1	1289		steps	2	5306		steps	3	4332		steps	4	3155		steps	5	1927		steps	6	1993		steps	7	571		steps	8	1004		steps	9	420		steps	10	2793		steps	11	2875		steps	12	443		steps	13	134		steps	14	1362		steps	15	1690		steps	16	2769		steps	17	425		steps	18	3130		steps	19	533		steps	20	3122		
+average	2	1963.65
+clauses:104231
+steps	1	97		steps	2	170		steps	3	26		steps	4	535		steps	5	15		steps	6	6		steps	7	17		steps	8	91		steps	9	106		steps	10	47		steps	11	143		steps	12	0		steps	13	4		steps	14	165		steps	15	268		steps	16	114		steps	17	54		steps	18	527		steps	19	15		steps	20	186		
+average	3	129.3
+clauses:173259
+steps	1	3193		steps	2	1791		steps	3	527		steps	4	3083		steps	5	2035		steps	6	356		steps	7	24		steps	8	581		steps	9	150		steps	10	1526		steps	11	920		steps	12	1425		steps	13	7443		steps	14	1046		steps	15	4516		steps	16	304		steps	17	907		steps	18	1842		steps	19	3178		steps	20	988		
+average	4	1791.7499999999998
+clauses:106317
+steps	1	17		steps	2	111		steps	3	2		steps	4	64		steps	5	382		steps	6	8		steps	7	283		steps	8	137		steps	9	39		steps	10	1		steps	11	8		steps	12	187		steps	13	474		steps	14	552		steps	15	91		steps	16	157		steps	17	16		steps	18	66		steps	19	224		steps	20	61		
+average	5	144.0
+clauses:92978
+steps	1	1652		steps	2	1154		steps	3	1020		steps	4	48		steps	5	2035		steps	6	119		steps	7	716		steps	8	209		steps	9	8278		steps	10	425		steps	11	28		steps	12	762		steps	13	1564		steps	14	5672		steps	15	849		steps	16	4739		steps	17	262		steps	18	8688		steps	19	1379		steps	20	155		
+average	6	1987.7
+clauses:128745
+steps	1	36		steps	2	547		steps	3	64		steps	4	724		steps	5	183		steps	6	13		steps	7	334		steps	8	911		steps	9	275		steps	10	236		steps	11	37		steps	12	14		steps	13	114		steps	14	56		steps	15	189		steps	16	703		steps	17	151		steps	18	1361		steps	19	637		steps	20	126		
+average	7	335.55000000000007
+clauses:80368
+steps	1	7357		steps	2	1238		steps	3	2159		steps	4	13223		steps	5	41		steps	6	1966		steps	7	6105		steps	8	7191		steps	9	10502		steps	10	1406		steps	11	4369		steps	12	8289		steps	13	13411		steps	14	4516		steps	15	7201		steps	16	2651		steps	17	950		steps	18	4000		steps	19	4171		steps	20	3012		
+average	8	5187.900000000001
+clauses:83807
+steps	1	480		steps	2	323		steps	3	1858		steps	4	587		steps	5	1206		steps	6	69		steps	7	370		steps	8	577		steps	9	1037		steps	10	385		steps	11	576		steps	12	602		steps	13	1954		steps	14	1060		steps	15	313		steps	16	153		steps	17	21		steps	18	266		steps	19	245		steps	20	232		
+average	9	615.6999999999999
+clauses:65545
+steps	1	3336		steps	2	125		steps	3	1218		steps	4	560		steps	5	803		steps	6	1420		steps	7	4		steps	8	107		steps	9	748		steps	10	456		steps	11	912		steps	12	224		steps	13	147		steps	14	236		steps	15	582		steps	16	210		steps	17	196		steps	18	372		steps	19	1137		steps	20	741		
+average	10	676.7
+clauses:119523
+steps	1	608		steps	2	2158		steps	3	3611		steps	4	4821		steps	5	367		steps	6	2317		steps	7	1383		steps	8	380		steps	9	640		steps	10	701		steps	11	1413		steps	12	2667		steps	13	1830		steps	14	1035		steps	15	71		steps	16	194		steps	17	938		steps	18	258		steps	19	1344		steps	20	2049		
+average	11	1439.2500000000002
+clauses:93274
+steps	1	26		steps	2	34		steps	3	0		steps	4	345		steps	5	15		steps	6	296		steps	7	74		steps	8	123		steps	9	414		steps	10	81		steps	11	37		steps	12	48		steps	13	108		steps	14	148		steps	15	101		steps	16	202		steps	17	86		steps	18	425		steps	19	47		steps	20	38		
+average	12	132.39999999999998
+clauses:57623
+steps	1	2287		steps	2	2451		steps	3	899		steps	4	2288		steps	5	651		steps	6	777		steps	7	1561		steps	8	1459		steps	9	554		steps	10	5231		steps	11	1508		steps	12	2058		steps	13	1044		steps	14	2424		steps	15	253		steps	16	887		steps	17	253		steps	18	1834		steps	19	1344		steps	20	6		
+average	13	1488.4500000000003
+clauses:61594
+steps	1	2026		steps	2	414		steps	3	326		steps	4	136		steps	5	1047		steps	6	470		steps	7	172		steps	8	1134		steps	9	609		steps	10	613		steps	11	191		steps	12	731		steps	13	349		steps	14	1959		steps	15	194		steps	16	192		steps	17	1853		steps	18	603		steps	19	817		steps	20	1335		
+average	14	758.55
+clauses:68789
+steps	1	465		steps	2	299		steps	3	50		steps	4	217		steps	5	124		steps	6	77		steps	7	346		steps	8	150		steps	9	666		steps	10	67		steps	11	522		steps	12	1117		steps	13	289		steps	14	1742		steps	15	21		steps	16	1		steps	17	154		steps	18	47		steps	19	420		steps	20	573		
+average	15	367.34999999999997
+clauses:156622
+steps	1	1043		steps	2	4		steps	3	10		steps	4	477		steps	5	111		steps	6	414		steps	7	437		steps	8	258		steps	9	148		steps	10	153		steps	11	103		steps	12	833		steps	13	947		steps	14	597		steps	15	506		steps	16	52		steps	17	443		steps	18	23		steps	19	124		steps	20	31		
+average	16	335.70000000000005
+clauses:83679
+steps	1	904		steps	2	193		steps	3	331		steps	4	2542		steps	5	809		steps	6	85		steps	7	1416		steps	8	522		steps	9	641		steps	10	1843		steps	11	149		steps	12	1415		steps	13	391		steps	14	379		steps	15	237		steps	16	528		steps	17	453		steps	18	647		steps	19	449		steps	20	1642		
+average	17	778.8000000000001
+clauses:73712
+steps	1	79		steps	2	19		steps	3	91		steps	4	138		steps	5	54		steps	6	30		steps	7	38		steps	8	42		steps	9	75		steps	10	145		steps	11	15		steps	12	188		steps	13	422		steps	14	38		steps	15	75		steps	16	79		steps	17	164		steps	18	93		steps	19	58		steps	20	106		
+average	18	97.45000000000002
+clauses:52070
+steps	1	4516		steps	2	5733		steps	3	10281		steps	4	15623		steps	5	7873		steps	6	1105		steps	7	3029		steps	8	14465		steps	9	608		steps	10	1864		steps	11	7171		steps	12	4452		steps	13	2410		steps	14	1888		steps	15	4872		steps	16	278		steps	17	2932		steps	18	4006		steps	19	1711		steps	20	6578		
+average	19	5069.75
+clauses:77086
+steps	1	607		steps	2	669		steps	3	1597		steps	4	6		steps	5	1305		steps	6	2188		steps	7	1054		steps	8	1061		steps	9	172		steps	10	773		steps	11	557		steps	12	133		steps	13	259		steps	14	968		steps	15	249		steps	16	188		steps	17	87		steps	18	464		steps	19	276		steps	20	267		
+average	20	644.0000000000001

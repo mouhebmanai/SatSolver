@@ -60,7 +60,7 @@ public class PPSZ extends RandomizedAlgorithm  {
         // Preprocess is done
         // now search
         for (int i = 0 ; i < I ; i++) {
-
+   if(i%50_000 == 0 ) System.out.println(i);
             List<Integer> permutation  = create_random_permutation(listedVars);
 
             Map<Integer,Boolean> assignment = Random_init(formula);
@@ -106,7 +106,6 @@ public class PPSZ extends RandomizedAlgorithm  {
 
         return resultingClauses;
     }
-
     private List<Integer> ResolveAPair(List<Integer> first, List<Integer> second, int s) {
         if(first.size() > s || second.size()> s) {
             return null;
@@ -146,11 +145,11 @@ public class PPSZ extends RandomizedAlgorithm  {
 
         for (Integer currentVar : permutation) {
             // remove if olr with the variable
-            if (formula.clauses().contains(new ArrayList<>(List.of(currentVar)))) {
+            if (resultingClauses.contains(new ArrayList<>(List.of(currentVar)))) {
                 assignment.put(currentVar, true);
             } else
                 // remove if olr with its negation
-                if (formula.clauses().contains(new ArrayList<>(List.of(-currentVar)))) {
+                if (resultingClauses.contains(new ArrayList<>(List.of(-currentVar)))) {
                     assignment.put(currentVar, false);
                 }
 
